@@ -23,4 +23,6 @@ Toolboxes required for running the Robust Testing Toolbox:
 
 
 To setup S-TaLiRo run the following in the Matlab command window:
->> setup_staliro
+```bash
+setup_staliro
+```
