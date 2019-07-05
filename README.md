@@ -20,7 +20,7 @@ CVX: Disciplined Convex Optimization (http://cvxr.com/cvx/)
 	   Tested version 1.21
  
 MatlabBGL: the hybrid distance metric with distances to the location guards
-         : http://www.mathworks.com/matlabcentral/fileexchange/10922
+           (http://www.mathworks.com/matlabcentral/fileexchange/10922)
 ```
 
 
