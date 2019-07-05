@@ -19,7 +19,7 @@ Toolboxes required for running the Robust Testing Toolbox:
 	   Tested version 1.21
  
         MatlabBGL: for the hybrid distance metric with distances to the location guards
-            : http://www.mathworks.com/matlabcentral/fileexchange/10922
+        : http://www.mathworks.com/matlabcentral/fileexchange/10922
 
 
 To setup S-TaLiRo run the following in the Matlab command window:
