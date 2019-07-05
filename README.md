@@ -19,7 +19,7 @@ Ellipsoidal Toolbox (http://code.google.com/p/ellipsoids/)
 CVX: Disciplined Convex Optimization (http://cvxr.com/cvx/)
 	   Tested version 1.21
  
-MatlabBGL: for the hybrid distance metric with distances to the location guards
+MatlabBGL: the hybrid distance metric with distances to the location guards
          : http://www.mathworks.com/matlabcentral/fileexchange/10922
 ```
 
