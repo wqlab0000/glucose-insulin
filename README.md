@@ -5,7 +5,7 @@ Install matlab (tested with matlab R2019a)
 
 Install S-taliro from https://sites.google.com/a/asu.edu/s-taliro/s-taliro
 
-Save the files in insulinGlucoseHumanCtrlRisk benchmark.
+Save the files in trunk/benchmarks.
 
 Toolboxes required for running the Robust Testing Toolbox:
 ```bash
