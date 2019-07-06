@@ -21,9 +21,12 @@ cp_array=[1 1 1 1 1 1 1 1 1 1];
 
 disp(' What would you like to explore ? ')
 disp(' 1. G >= 4 /\ G <= 17 after time 200 ' )
-disp(' 2. G >= 4 /\ G <= 17 in time [60,200] ')
+disp(' 2. G >= 2.5 /\ G <= 17 after time 200 ')
 disp(' 3. G <= 17 /\ G <= 7 after time 200 ')
 disp(' 4. G <= 17 /\ G <= 7 in time [60,200] ')
+% disp(' 5. i >= 6.5 \/ G <= 25 after time 200 ')
+% disp(' 6. i >= 1.8 \/ G <= 12 after time 200 ')
+% disp(' 7. i <= 1.4 \/ G >= 3 after time 200 ')
 
 
 disp(' Please select option: ' )
@@ -51,15 +54,15 @@ switch opt
         propName='Hypoglycemia (G >= 4 /\ G <= 17 after time 200 ) ';
         fName='runData-p1.txt';
     case 2
-        phi = '[] a  /\ []_[60,200] b';
+        phi = '[] a  /\ []_[200,400] b';
         preds(1).str='a';
         preds(1).A = [-1 0 0 ];
-        preds(1).b = [-4 0 0 ];
+        preds(1).b = [-2.5 0 0 ];
         preds(2).str = 'b';
         preds(2).A = [1 0 0 ];
         preds(2).b = [17 0 0 ]
         
-        propName='Hypoglycemia (G >= 4 /\ G <= 14 in time [60,200]) ';
+        propName='Hypoglycemia (G >= 2.5 /\ G <= 17 after time 200) ';
         fName = 'runData-p2.txt'
     case 3
         phi = '[] a /\ []_[200,400] b';
@@ -82,7 +85,42 @@ switch opt
         propName='Hyperglycemia ( G <= 17 /\ G <= 7 in time [60,200]  ) ';
         fName = 'runData-p4.txt';
         
-             
+%     case 5
+%         phi = '[] a \/ []_[200,400] b';
+%         preds(1).str='a';
+%         preds(1).A = [1 0 0];
+%         preds(1).b = [18 0 0]; 
+%         preds(2).str = 'b';
+%         preds(2).A = [1 0 0 ];
+%         preds(2).b = [25 0 0 ]
+% 
+%         propName='Hypoglycemia (i >= 6.5 \/ G <= 25 after time 200 ) ';
+%         fName='runData-p5.txt';
+%         
+%     case 6
+%         phi = '[] a \/ []_[200,400] b';
+%         preds(1).str='a';
+%         preds(1).A = [1 0 0];
+%         preds(1).b = [5 0 0]; 
+%         preds(2).str = 'b';
+%         preds(2).A = [1 0 0 ];
+%         preds(2).b = [12 0 0 ]
+% 
+%         propName='Hypoglycemia (i >= 1.8 \/ G <= 12 after time 200 ) ';
+%         fName='runData-p6.txt';
+%     
+%     case 7
+%         phi = '[] a \/ []_[200,400] b';
+%         preds(1).str='a';
+%         preds(1).A = [-1 0 0];
+%         preds(1).b = [-4 0 0]; 
+%         preds(2).str = 'b';
+%         preds(2).A = [-1 0 0 ];
+%         preds(2).b = [-3 0 0 ]
+% 
+%         propName='Hypoglycemia (i <= 1.4 \/ G >= 3 after time 200 ) ';
+%         fName='runData-p7.txt';
+%              
 end
 
 time = 400;
