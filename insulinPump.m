@@ -12,21 +12,18 @@ input_range = [60 60;   % meal time announced
                100 300; % time for correction bolus administration
                 20 100;   % meal time actual
                 30 70;  % meal duration actual
-                100 400; % meal carbohydrates actual
+                100 300; % meal carbohydrates actual
                 20 80;   % meal GI factor actualalpha=1;
-                -.4 .4];   % calibration error in CGM monitor
+                -.2 .2];   % calibration error in CGM monitor
 
 cp_array=[1 1 1 1 1 1 1 1 1 1];
 
 
 disp(' What would you like to explore ? ')
-disp(' 1. G >= 5 /\ G <= 25 after time 200 ' )
-disp(' 2. G >= 4 /\ G <= 25 after time 60 ')
-disp(' 3. G <= 25 /\ G <= 12 after time 200 ')
-disp(' 4. G <= 25 /\ G <= 10 in time [60,200] ')
-disp(' 5. i >= 6.5 \/ G <= 25 after time 200 ')
-disp(' 6. i >= 1.8 \/ G <= 12 after time 200 ')
-disp(' 7. i <= 1.4 \/ G >= 3 after time 200 ')
+disp(' 1. G >= 4 /\ G <= 17 after time 200 ' )
+disp(' 2. G >= 4 /\ G <= 17 in time [60,200] ')
+disp(' 3. G <= 17 /\ G <= 7 after time 200 ')
+disp(' 4. G <= 17 /\ G <= 7 in time [60,200] ')
 
 
 disp(' Please select option: ' )
@@ -35,7 +32,7 @@ opt = input( 'Please select an option : ')
 disp('You selected')
 disp(opt)
 
-if (opt < 1 || opt > 7) 
+if (opt < 1 || opt > 4) 
     disp('Not a legal option!')
     return
 end
@@ -46,12 +43,12 @@ switch opt
         phi = '[] a /\ []_[200,400] b';
         preds(1).str='a';
         preds(1).A = [-1 0 0];
-        preds(1).b = [-5 0 0]; 
+        preds(1).b = [-4 0 0]; 
         preds(2).str = 'b';
         preds(2).A = [1 0 0 ];
-        preds(2).b = [25 0 0 ]
+        preds(2).b = [17 0 0 ]
 
-        propName='Hypoglycemia (G >= 5 /\ G <= 25 after time 200 ) ';
+        propName='Hypoglycemia (G >= 4 /\ G <= 17 after time 200 ) ';
         fName='runData-p1.txt';
     case 2
         phi = '[] a  /\ []_[60,200] b';
@@ -60,66 +57,31 @@ switch opt
         preds(1).b = [-4 0 0 ];
         preds(2).str = 'b';
         preds(2).A = [1 0 0 ];
-        preds(2).b = [25 0 0 ]
+        preds(2).b = [17 0 0 ]
         
-        propName='Hypoglycemia (G >= 4 /\ G <= 25 after time 60) ';
+        propName='Hypoglycemia (G >= 4 /\ G <= 14 in time [60,200]) ';
         fName = 'runData-p2.txt'
     case 3
         phi = '[] a /\ []_[200,400] b';
         preds(1).str = 'a';
         preds(1).A = [1 0 0 ];
-        preds(1).b = [25 0 0 ];
+        preds(1).b = [17 0 0 ];
         preds(2).str = 'b';
         preds(2).A = [1 0 0 ];
-        preds(2).b = [8 0 0 ]
-        propName='Significant Hyperglycemia (G <= 25 /\ G <= 12 after time 200 ) ';
+        preds(2).b = [7 0 0 ]
+        propName='Significant Hyperglycemia (G <= 17 /\ G <= 7 after time 200 ) ';
         fName = 'runData-p3.txt';
     case 4
         phi = '[] a  /\ []_[60,200] b';
         preds(1).str='a';
         preds(1).A = [1 0 0 ];
-        preds(1).b = [25 0 0 ];
+        preds(1).b = [17 0 0 ];
         preds(2).str = 'b';
         preds(2).A = [1 0 0 ];
-        preds(2).b = [10 0 0 ]
-        propName='Hyperglycemia ( G <= 25 /\ G <= 10 in time [60,200]  ) ';
+        preds(2).b = [7 0 0 ]
+        propName='Hyperglycemia ( G <= 17 /\ G <= 7 in time [60,200]  ) ';
         fName = 'runData-p4.txt';
         
-    case 5
-        phi = '[] a \/ []_[200,400] b';
-        preds(1).str='a';
-        preds(1).A = [1 0 0];
-        preds(1).b = [18 0 0]; 
-        preds(2).str = 'b';
-        preds(2).A = [1 0 0 ];
-        preds(2).b = [25 0 0 ]
-
-        propName='Hypoglycemia (i >= 6.5 \/ G <= 25 after time 200 ) ';
-        fName='runData-p5.txt';
-        
-    case 6
-        phi = '[] a \/ []_[200,400] b';
-        preds(1).str='a';
-        preds(1).A = [1 0 0];
-        preds(1).b = [5 0 0]; 
-        preds(2).str = 'b';
-        preds(2).A = [1 0 0 ];
-        preds(2).b = [12 0 0 ]
-
-        propName='Hypoglycemia (i >= 1.8 \/ G <= 12 after time 200 ) ';
-        fName='runData-p6.txt';
-    
-    case 7
-        phi = '[] a \/ []_[200,400] b';
-        preds(1).str='a';
-        preds(1).A = [-1 0 0];
-        preds(1).b = [-4 0 0]; 
-        preds(2).str = 'b';
-        preds(2).A = [-1 0 0 ];
-        preds(2).b = [-3 0 0 ]
-
-        propName='Hypoglycemia (i <= 1.4 \/ G >= 3 after time 200 ) ';
-        fName='runData-p7.txt';
              
 end
 
@@ -145,7 +107,7 @@ opt.optimization_solver = 'SA_Taliro';
 
 % opt.optim_params.n_tests=1000;
 opt.optim_params.n_tests=100;
-opt.taliro = 'dp_taliro';
+% opt.taliro = 'dp_taliro';
 
 
 fid = fopen(fName,'a');
