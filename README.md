@@ -13,11 +13,8 @@ Toolboxes required for running the Robust Testing Toolbox:
 Multi Parametric Toolbox (http://control.ee.ethz.ch/~mpt/)
 	   Tested version 3.0
 	
-Ellipsoidal Toolbox (http://code.google.com/p/ellipsoids/)
-	   Tested version 1.1.2
-	
 CVX: Disciplined Convex Optimization (http://cvxr.com/cvx/)
-	   Tested version 1.21
+	   Tested version 2.1
  
 MatlabBGL: the hybrid distance metric with distances to the location guards
            (http://www.mathworks.com/matlabcentral/fileexchange/10922)
