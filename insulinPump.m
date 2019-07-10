@@ -51,7 +51,7 @@ switch opt
         preds(2).A = [1 0 0 ];
         preds(2).b = [17 0 0 ]
 
-        propName='Hypoglycemia (G >= 4 /\ G <= 17 after time 200 ) ';
+        propName='(G >= 4 /\ G <= 17 after time 200 ) ';
         fName='runData-p1.txt';
     case 2
         phi = '[] a  /\ []_[200,400] b';
@@ -62,7 +62,7 @@ switch opt
         preds(2).A = [1 0 0 ];
         preds(2).b = [17 0 0 ]
         
-        propName='Hypoglycemia (G >= 2.5 /\ G <= 17 after time 200) ';
+        propName='(G >= 2.5 /\ G <= 17 after time 200) ';
         fName = 'runData-p2.txt'
     case 3
         phi = '[] a /\ []_[200,400] b';
@@ -72,7 +72,7 @@ switch opt
         preds(2).str = 'b';
         preds(2).A = [1 0 0 ];
         preds(2).b = [7 0 0 ]
-        propName='Significant Hyperglycemia (G <= 17 /\ G <= 7 after time 200 ) ';
+        propName=' (G <= 17 /\ G <= 7 after time 200 ) ';
         fName = 'runData-p3.txt';
     case 4
         phi = '[] a  /\ []_[60,200] b';
@@ -82,7 +82,7 @@ switch opt
         preds(2).str = 'b';
         preds(2).A = [1 0 0 ];
         preds(2).b = [7 0 0 ]
-        propName='Hyperglycemia ( G <= 17 /\ G <= 7 in time [60,200]  ) ';
+        propName=' ( G <= 17 /\ G <= 7 in time [60,200]  ) ';
         fName = 'runData-p4.txt';
         
 %     case 5
