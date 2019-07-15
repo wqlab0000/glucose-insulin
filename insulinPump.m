@@ -1,32 +1,31 @@
 clear 
-mdl = 'insulinGlucoseSimHumanCtrl1';
+mdl = 'insulinGlucose';
 
 
 load_system(mdl);
 warning off all
 init_cond = [];
-input_range = [60 60;   % meal time announced
-               50  50;  % meal duration announced
-               200 200; % meal carbohydrates
-                45 45;   % meal GI factor announced
-               100 300; % time for correction bolus administration
-                20 100;   % meal time actual
-                30 70;  % meal duration actual
-                100 300; % meal carbohydrates actual
-                20 80;   % meal GI factor actualalpha=1;
-                -.2 .2];   % calibration error in CGM monitor
+input_range = [40 40;   % meal time announced
+               20  20;  % meal duration announced
+               150 150; % meal carbohydrates
+                50 50;   % meal GI factor announced
+               150 250; % time for correction bolus administration
+                40 40;   % meal time actual
+                20 20;  % meal duration actual
+               200 200; % meal carbohydrates actual
+                50 50;   % meal GI factor actualal pha=1;
+                -.1 .1];   % calibration error in CGM monitor
 
 cp_array=[1 1 1 1 1 1 1 1 1 1];
 
 
 disp(' What would you like to explore ? ')
-disp(' 1. G >= 4 /\ G <= 17 after time 200 ' )
-disp(' 2. G >= 2.5 /\ G <= 17 after time 200 ')
-disp(' 3. G <= 17 /\ G <= 7 after time 200 ')
-disp(' 4. G <= 17 /\ G <= 7 in time [60,200] ')
-% disp(' 5. i >= 6.5 \/ G <= 25 after time 200 ')
-% disp(' 6. i >= 1.8 \/ G <= 12 after time 200 ')
-% disp(' 7. i <= 1.4 \/ G >= 3 after time 200 ')
+
+disp(' 1. G >= 4 /\ G <= 10 ' )
+% disp(' 2. G >= 2.5 /\ G <= 17 after time 200 ')
+% disp(' 3. G <= 17 /\ G <= 7 after time 200 ')
+% disp(' 4. G <= 17 /\ G <= 7 in time [60,200] ')
+
 
 
 disp(' Please select option: ' )
@@ -42,85 +41,64 @@ end
 
 
 switch opt
-    case 1
-        phi = '[] a /\ []_[200,400] b';
-        preds(1).str='a';
-        preds(1).A = [-1 0 0];
-        preds(1).b = [-4 0 0]; 
-        preds(2).str = 'b';
-        preds(2).A = [1 0 0 ];
-        preds(2).b = [17 0 0 ]
 
-        propName='(G >= 4 /\ G <= 17 after time 200 ) ';
-        fName='runData-p1.txt';
-    case 2
-        phi = '[] a  /\ []_[200,400] b';
-        preds(1).str='a';
-        preds(1).A = [-1 0 0 ];
-        preds(1).b = [-2.5 0 0 ];
-        preds(2).str = 'b';
-        preds(2).A = [1 0 0 ];
-        preds(2).b = [17 0 0 ]
-        
-        propName='(G >= 2.5 /\ G <= 17 after time 200) ';
-        fName = 'runData-p2.txt'
-    case 3
-        phi = '[] a /\ []_[200,400] b';
-        preds(1).str = 'a';
-        preds(1).A = [1 0 0 ];
-        preds(1).b = [17 0 0 ];
-        preds(2).str = 'b';
-        preds(2).A = [1 0 0 ];
-        preds(2).b = [7 0 0 ]
-        propName=' (G <= 17 /\ G <= 7 after time 200 ) ';
-        fName = 'runData-p3.txt';
-    case 4
-        phi = '[] a  /\ []_[60,200] b';
-        preds(1).str='a';
-        preds(1).A = [1 0 0 ];
-        preds(1).b = [17 0 0 ];
-        preds(2).str = 'b';
-        preds(2).A = [1 0 0 ];
-        preds(2).b = [7 0 0 ]
-        propName=' ( G <= 17 /\ G <= 7 in time [60,200]  ) ';
-        fName = 'runData-p4.txt';
-        
-%     case 5
-%         phi = '[] a \/ []_[200,400] b';
-%         preds(1).str='a';
-%         preds(1).A = [1 0 0];
-%         preds(1).b = [18 0 0]; 
-%         preds(2).str = 'b';
-%         preds(2).A = [1 0 0 ];
-%         preds(2).b = [25 0 0 ]
-% 
-%         propName='Hypoglycemia (i >= 6.5 \/ G <= 25 after time 200 ) ';
-%         fName='runData-p5.txt';
-%         
-%     case 6
-%         phi = '[] a \/ []_[200,400] b';
-%         preds(1).str='a';
-%         preds(1).A = [1 0 0];
-%         preds(1).b = [5 0 0]; 
-%         preds(2).str = 'b';
-%         preds(2).A = [1 0 0 ];
-%         preds(2).b = [12 0 0 ]
-% 
-%         propName='Hypoglycemia (i >= 1.8 \/ G <= 12 after time 200 ) ';
-%         fName='runData-p6.txt';
-%     
-%     case 7
-%         phi = '[] a \/ []_[200,400] b';
-%         preds(1).str='a';
+%  case 1
+%         phi = '[] a /\ [] b';
+%         preds(1).str='a'; % G_1>=4
 %         preds(1).A = [-1 0 0];
 %         preds(1).b = [-4 0 0]; 
+%         preds(2).str ='b'; % G_2<=10
+%         preds(2).A = [1 0 0 ];
+%         preds(2).b = [10 0 0];
+
+%         propName=' (G_1 >= 4 /\ G_2 <= 10 ) ';
+%         fName='runData-p1.txt';
+
+   case 1
+        phi = '[] a /\ [] b';
+        preds(1).str='a'; % G_1>=4
+        preds(1).A = [-0.5 0 0];
+        preds(1).b = [-4 0 0]; 
+        preds(2).str ='b'; % G_2<=10
+        preds(2).A = [1 0 0 ];
+        preds(2).b = [10 0 0];
+
+        propName=' (G_1 >= 4 /\ G_2 <= 10 ) ';
+        fName='runData-p1.txt';
+        
+%     case 2
+%         phi = '[] a  /\ []_[200,400] b';
+%         preds(1).str='a';
+%         preds(1).A = [-1 0 0 ];
+%         preds(1).b = [-2.5 0 0 ];
 %         preds(2).str = 'b';
-%         preds(2).A = [-1 0 0 ];
-%         preds(2).b = [-3 0 0 ]
-% 
-%         propName='Hypoglycemia (i <= 1.4 \/ G >= 3 after time 200 ) ';
-%         fName='runData-p7.txt';
-%              
+%         preds(2).A = [1 0 0 ];
+%         preds(2).b = [17 0 0 ];
+        
+%         propName=' (G >= 2.5 /\ G <= 17 after time 200) ';
+%         fName = 'runData-p2.txt'
+%     case 3
+%         phi = '[] a /\ []_[200,400] b';
+%         preds(1).str = 'a';
+%         preds(1).A = [1 0 0 ];
+%         preds(1).b = [17 0 0 ];
+%         preds(2).str = 'b';
+%         preds(2).A = [1 0 0 ];
+%         preds(2).b = [7 0 0 ];
+%         propName=' (G <= 17 /\ G <= 7 after time 200 ) ';
+%         fName = 'runData-p3.txt';
+%     case 4
+%         phi = '[] a  /\ []_[60,200] b';
+%         preds(1).str='a';
+%         preds(1).A = [1 0 0 ];
+%         preds(1).b = [17 0 0 ];
+%         preds(2).str = 'b';
+%         preds(2).A = [1 0 0 ];
+%         preds(2).b = [7 0 0 ];
+%         propName=' ( G <= 17 /\ G <= 7 in time [60,200]  ) ';
+%         fName = 'runData-p4.txt';
+        
+ 
 end
 
 time = 400;
@@ -155,7 +133,6 @@ fid = fopen(fName,'a');
      [results, history] = staliro(mdl, init_cond, input_range, cp_array, phi, preds,time,opt);
      [T,~,Y,IT] = SimSimulinkMdl(mdl,init_cond,input_range,cp_array,results.run(results.optRobIndex).bestSample(:,1),time,opt);
     
-%     [robustnessValues,nrTests,posteriorMean,confidenceInterval] = bayesianSMC(mdl,phi,preds,delta,c,alpha,beta)
 
 
     figure ;
