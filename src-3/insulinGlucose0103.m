@@ -47,18 +47,7 @@ end
 
 
 switch opt
-%     case 1
-%         phi = '[] a /\ [] b';
-%         preds(1).str='a';
-%         preds(1).A = [-1 0 0];
-%         preds(1).b = [-4 0 0]; 
-%         preds(2).str = 'b';
-%         preds(2).A = [1 0 0 ];
-%         preds(2).b = [17 0 0 ]
-% 
-%         propName=' (G >= 4 /\ G <= 17 after time 200 ) ';
-%         fName='runData-p1.txt';
-%         
+
         
    case 1
         phi = '[] a /\ [] b';
@@ -70,7 +59,7 @@ switch opt
         preds(2).b = [9 0 0];
 
         propName=' (G_1 >= 4.5 /\ G_2 <= 10 ) ';
-        fName='Data-01.txt';
+        fName='Data-01-03.txt';
         
     case 2
         phi = '[] a  /\ []_[200,400] b';
