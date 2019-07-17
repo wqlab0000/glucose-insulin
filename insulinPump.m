@@ -39,22 +39,11 @@ end
 
 switch opt
 
-%  case 1
-%         phi = '[] a /\ [] b';
-%         preds(1).str='a'; % G_1>=4
-%         preds(1).A = [-1 0 0];
-%         preds(1).b = [-4 0 0]; 
-%         preds(2).str ='b'; % G_2<=10
-%         preds(2).A = [1 0 0 ];
-%         preds(2).b = [10 0 0];
-
-%         propName=' (G_1 >= 4 /\ G_2 <= 10 ) ';
-%         fName='runData-p1.txt';
 
    case 1
         phi = '[] a /\ [] b';
         preds(1).str='a'; % G_1>=4.5
-        preds(1).A = [-0.5 0 0];
+        preds(1).A = [-1 0 0];
         preds(1).b = [-4.5 0 0]; 
         preds(2).str ='b'; % G_2<=10
         preds(2).A = [1 0 0 ];
