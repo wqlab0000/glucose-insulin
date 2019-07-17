@@ -1,0 +1,6 @@
+Robustness: -3.491560, Runtime: 27.195098 seconds
+Meal time announced: 40.000000, actual: 40.000000 
+Meal duration announced: 20.000000, actual: 20.000000 
+Meal carbohydrate announced: 150.000000, actual: 199.985162 
+Meal GI announced: 50.000000, actual 50.000000 
+Calibration Error: -0.098211 
