@@ -21,7 +21,7 @@ cp_array=[1 1 1 1 1 1 1 1 1 1];
 
 disp(' What would you like to explore ? ')
 
-disp(' 1. G >= 4 /\ G <= 10 ' )
+disp(' 1. G >= 4.5 /\ G <= 9 ' )
 
 
 
@@ -47,7 +47,7 @@ switch opt
         preds(1).b = [-4.5 0 0]; 
         preds(2).str ='b'; % G_2<=10
         preds(2).A = [1 0 0 ];
-        preds(2).b = [10 0 0];
+        preds(2).b = [9 0 0];
 
         propName=' (G_1 >= 4 /\ G_2 <= 10 ) ';
         fName='Data-01.txt';
