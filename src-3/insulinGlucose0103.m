@@ -48,87 +48,52 @@ end
 
 switch opt
 
-        
+
    case 1
-        phi = '[] a /\ [] b';
-        preds(1).str='a'; % G_1>=4.5
+        phi = '[] g_1 /\ [] g_2';
+        preds(1).str='g_1'; % G_1>=4.5
         preds(1).A = [-1 0 0];
         preds(1).b = [-4.5 0 0]; 
-        preds(2).str ='b'; % G_2<=10
+        preds(2).str ='g_2'; % G_2<=10
         preds(2).A = [1 0 0 ];
         preds(2).b = [9 0 0];
 
-        propName=' (G_1 >= 4.5 /\ G_2 <= 10 ) ';
-        fName='Data-01-03.txt';
+        propName=' (G_1 >= 4.5 /\ G_2 <= 9 ) ';
+        fName='Data-01.txt';
         
-    case 2
-        phi = '[] a  /\ []_[200,400] b';
-        preds(1).str='a';
-        preds(1).A = [-1 0 0 ];
-        preds(1).b = [-2.5 0 0 ];
-        preds(2).str = 'b';
-        preds(2).A = [1 0 0 ];
-        preds(2).b = [17 0 0 ];
-        
-        propName=' (G >= 2.5 /\ G <= 17 after time 200) ';
-        fName = 'Data-02.txt'
-    case 3
-        phi = '[] a /\ []_[200,400] b';
-        preds(1).str = 'a';
-        preds(1).A = [1 0 0 ];
-        preds(1).b = [17 0 0 ];
-        preds(2).str = 'b';
-        preds(2).A = [1 0 0 ];
-        preds(2).b = [7 0 0 ];
-        propName=' (G <= 17 /\ G <= 7 after time 200 ) ';
-        fName = 'Data-03.txt';
-    case 4
-        phi = '[] a  /\ []_[60,200] b';
-        preds(1).str='a';
-        preds(1).A = [1 0 0 ];
-        preds(1).b = [17 0 0 ];
-        preds(2).str = 'b';
-        preds(2).A = [1 0 0 ];
-        preds(2).b = [7 0 0 ];
-        propName=' ( G <= 17 /\ G <= 7 in time [60,200]  ) ';
-        fName = 'Data-04.txt';
-        
-%     case 5
-%         phi = '[] a \/ []_[200,400] b';
+%     case 2
+%         phi = '[] g_1  /\ []_[200,400] g_2';
 %         preds(1).str='a';
-%         preds(1).A = [1 0 0];
-%         preds(1).b = [18 0 0]; 
+%         preds(1).A = [-1 0 0 ];
+%         preds(1).b = [-2.5 0 0 ];
 %         preds(2).str = 'b';
 %         preds(2).A = [1 0 0 ];
-%         preds(2).b = [25 0 0 ]
-% 
-%         propName='Hypoglycemia (i >= 6.5 \/ G <= 25 after time 200 ) ';
-%         fName='runData-p5.txt';
-%         
-%     case 6
-%         phi = '[] a \/ []_[200,400] b';
-%         preds(1).str='a';
-%         preds(1).A = [1 0 0];
-%         preds(1).b = [5 0 0]; 
-%         preds(2).str = 'b';
+%         preds(2).b = [17 0 0 ];
+        
+%         propName=' (G_1 >= 2.5 /\ G_2 <= 17 after time 200) ';
+%         fName = 'Data-02.txt'
+%     case 3
+%         phi = '[] g_1 /\ []_[200,400] g_2;
+%         preds(1).str = 'g_1';
+%         preds(1).A = [1 0 0 ];
+%         preds(1).b = [17 0 0 ];
+%         preds(2).str = 'g_2';
 %         preds(2).A = [1 0 0 ];
-%         preds(2).b = [12 0 0 ]
-% 
-%         propName='Hypoglycemia (i >= 1.8 \/ G <= 12 after time 200 ) ';
-%         fName='runData-p6.txt';
-%     
-%     case 7
-%         phi = '[] a \/ []_[200,400] b';
-%         preds(1).str='a';
-%         preds(1).A = [-1 0 0];
-%         preds(1).b = [-4 0 0]; 
-%         preds(2).str = 'b';
-%         preds(2).A = [-1 0 0 ];
-%         preds(2).b = [-3 0 0 ]
-% 
-%         propName='Hypoglycemia (i <= 1.4 \/ G >= 3 after time 200 ) ';
-%         fName='runData-p7.txt';
-%              
+%         preds(2).b = [7 0 0 ];
+%         propName=' (G_1 <= 17 /\ G_2 <= 7 after time 200 ) ';
+%         fName = 'Data-03.txt';
+%     case 4
+%         phi = '[] g_1  /\ []_[60,200] g_2';
+%         preds(1).str='g_1';
+%         preds(1).A = [1 0 0 ];
+%         preds(1).b = [17 0 0 ];
+%         preds(2).str = 'g_2';
+%         preds(2).A = [1 0 0 ];
+%         preds(2).b = [7 0 0 ];
+%         propName=' ( G_1 <= 17 /\ G_2 <= 7 in time [60,200]  ) ';
+%         fName = 'Data-04.txt';
+        
+ 
 end
 
 time = 400;
@@ -163,7 +128,6 @@ fid = fopen(fName,'a');
      [results, history] = staliro(mdl, init_cond, input_range, cp_array, phi, preds,time,opt);
      [T,~,Y,IT] = SimSimulinkMdl(mdl,init_cond,input_range,cp_array,results.run(results.optRobIndex).bestSample(:,1),time,opt);
     
-%     [robustnessValues,nrTests,posteriorMean,confidenceInterval] = bayesianSMC(mdl,phi,preds,delta,c,alpha,beta)
 
 
     figure ;
