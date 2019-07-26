@@ -1,0 +1,69 @@
+(G_1<=9) 
+
+Run number 1 / 1 
+ Initial robustness value ==> -1.3604
+Best ==> -1.4833
+Best ==> -1.5197
+Best ==> -1.5198
+Best ==> -1.5353
+Best ==> -1.546
+Best ==> -1.5487
+Best ==> -1.61
+Best ==> -1.6281
+Best ==> -1.6427
+Best ==> -1.6513
+Best ==> -1.6531
+50 Acceptance Ratio=0.82 beta=-22.5,0.825
+Best ==> -1.6549
+Best ==> -1.6621
+Best ==> -1.6625
+Best ==> -1.6635
+Best ==> -1.6635
+Best ==> -1.664
+Best ==> -1.6641
+Best ==> -1.6641
+Best ==> -1.6641
+Best ==> -1.6641
+Best ==> -1.6642
+Best ==> -1.6642
+Best ==> -1.6642
+100 Acceptance Ratio=0.56 beta=-33.75,0.9075
+  Running time of run 1: 19.8972 sec
+Best input for simulation run # 
+     1
+
+Robustness:
+   -1.6642
+
+Meal time announced: 
+    40
+
+Meal time actual:
+    40
+
+Meal carbohydrate announced:
+   150
+
+Meal carbohydrate actual:
+  200.0000
+
+Meal GI announced: 
+    50
+
+Meal GI actual: 
+    50
+
+Calibration Error: 
+   -0.0638
+
+Correct bolus administered at time
+  171.5270
+
+
+
+Robustness: -1.664157, Runtime: 19.897164 seconds
+ Meal time announced: 40.000000, actual: 40.000000 
+ Meal duration announced: 30.000000, actual: 30.000000 
+ Meal carbohydrate announced: 150.000000, actual: 199.999985 
+ Meal GI announced: 50.000000, actual 50.000000 
+ Calibration Error: -0.063846 
