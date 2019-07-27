@@ -1,5 +1,5 @@
 clear 
-mdl = 'insulinGlucoseSimHumanCtrl2';
+mdl = 'insulinGlucose';
 
 
 load_system(mdl);
