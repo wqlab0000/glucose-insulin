@@ -26,6 +26,9 @@ disp(' 1. G <= 9 ' )
 disp(' 2. G >= 4.5')
 disp(' 3. I <= 0.2 ' )
 disp(' 4. I >= 0.025 ')
+disp(' 5. [] G >=4.5 /\ []_[0, 40] i<=0.04' )
+disp(' 6.  G<=9 /\ i<=0.2')
+
 
 
 
@@ -47,6 +50,7 @@ case 1
         
         scale = 1;
         phi = '[] g_1';
+        
         preds(1).str='g_1'; %G_1<=9
         preds(1).A = [1 0 0 ];
         preds(1).b = [9 0 0 ]; 
@@ -58,6 +62,7 @@ case 2
         
         scale = 2;
         phi = '[] g_2';
+        
         preds(1).str='g_2'; %G_1>=4.5
         preds(1).A = [-1 0 0 ];
         preds(1).b = [-4.5 0 0 ]; 
@@ -68,6 +73,7 @@ case 3
         
         scale = 100;
         phi = '[] i_1';
+        
         preds(1).str='i_1'; %I_1<=0.2
         preds(1).A = [0 1 0 ];
         preds(1).b = [0 0.2 0]; 
@@ -78,6 +84,7 @@ case 4
         
         scale = 10;
         phi = '[] i_2';
+        
         preds(1).str='i_2'; %I_1>=0.25
         preds(1).A = [0 -1 0 ];
         preds(1).b = [0 0.025 0]; 
@@ -90,28 +97,30 @@ case 5
         
         scale = 2;
         phi = '[] g_1 \/ []_[0, 40] i_1';
+        
         preds(1).str='g_1'; %G_1>=4.5
         preds(1).A = [-1 0 0 ];
         preds(1).b = [-4.5 0 0]; 
         
         preds(2).str='i_1'; %I_1<=0.04
-        preds(2).A = [0 62 0 ];
+        preds(2).A = [0 40 0 ];
         preds(2).b = [0 0.04 0]; 
-        propName=' (I_1<=0.2) ';
+        propName=' ([] G >=4.5 /\ []_[0, 40] i<=0.04) ';
         fName='Data-05.txt';
         
 case 6
         
         scale = 2;
         phi = '[] g_2 /\ [] i_2';
+        
         preds(1).str='g_2'; %G_1<=9
         preds(1).A = [1 0 0 ];
         preds(1).b = [9 0 0]; 
         
-        preds(2).str='i_1'; %I_1>=0.2
-        preds(2).A = [0 62 0 ];
+        preds(2).str='i_1'; %I_1=0.2
+        preds(2).A = [0 40 0 ];
         preds(2).b = [0 0.2 0]; 
-        propName=' (I_1<=0.2) ';
+        propName=' (G<=9 /\ i<=0.2) ';
         fName='Data-04.txt';
         
         
