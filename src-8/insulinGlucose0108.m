@@ -43,7 +43,7 @@ switch opt
 
 case 1
         
-        j=1
+        scale=1
         phi = '[] g_1';
         preds(1).str='g_1'; %G_1<=9
         preds(1).A = [1 0 0 ];
@@ -54,7 +54,7 @@ case 1
         
 case 2
         
-        j=2
+        scale=2
         phi = '[] g_2';
         preds(1).str='g_2'; %G_1>=4.5
         preds(1).A = [-1 0 0 ];
@@ -106,7 +106,7 @@ fid = fopen(fName,'a');
          
    
    fprintf (fid,' Best input for simulation run # %d\n',i);
-   fprintf (fid, ' Robustness: %f, Runtime: %f seconds\n', j * results.run(results.optRobIndex).bestRob,results.run(results.optRobIndex).time);
+   fprintf (fid, ' Robustness: %f, Runtime: %f seconds\n', scale * results.run(results.optRobIndex).bestRob,results.run(results.optRobIndex).time);
    fprintf (fid,' Meal time announced: %f, actual: %f \n', IT(1,2), IT(1,7));
    fprintf (fid,' Meal duration announced: %f, actual: %f \n', IT(1,3), IT(1,8));
    fprintf (fid,' Meal carbohydrate announced: %f, actual: %f \n', IT(1,4), IT(1,9));
@@ -116,7 +116,7 @@ fid = fopen(fName,'a');
    disp ('Best input for simulation run # ')
    disp(i)
    disp('Robustness:')
-   disp(j * results.run(results.optRobIndex).bestRob)
+   disp(scale * results.run(results.optRobIndex).bestRob)
    disp ('Meal time announced: ')
    disp(IT(1,2))
    disp ('Meal time actual:' )
