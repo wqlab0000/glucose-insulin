@@ -76,7 +76,7 @@ case 3
         
         preds(1).str='i_1'; %I_1<=0.2
         preds(1).A = [0 1 0 ];
-        preds(1).b = [0 0.2 0]; 
+        preds(1).b = 0.2; 
         propName='(I_1<=0.2) ';
         fName='Data-03.txt';
         
@@ -87,7 +87,7 @@ case 4
         
         preds(1).str='i_2'; %I_1>=0.25
         preds(1).A = [0 -1 0 ];
-        preds(1).b = [0 0.025 0]; 
+        preds(1).b = 0.025; 
         propName=' (I_1>=0.25) ';
         fName='Data-04.txt';
 
@@ -103,8 +103,8 @@ case 5
         preds(1).b = [-4.5 0 0]; 
         
         preds(2).str='i_1'; %I_1<=0.04
-        preds(2).A = [0 0.02 0 ];
-        preds(2).b = [0 0.04 0]; 
+        preds(2).A = [0 1 0 ];
+        preds(2).b = 0.04; 
         propName=' ([] G >=4.5 /\ []_[0, 40] i<=0.04) ';
         fName='Data-05.txt';
         
@@ -118,8 +118,8 @@ case 6
         preds(1).b = [9 0 0]; 
         
         preds(2).str='i_1'; %I_1=0.2
-        preds(2).A = [0 0.02 0 ];
-        preds(2).b = [0 0.2 0]; 
+        preds(2).A = [0 1 0 ];
+        preds(2).b = 0.2; 
         propName=' (G<=9 /\ i<=0.2) ';
         fName='Data-04.txt';
         
