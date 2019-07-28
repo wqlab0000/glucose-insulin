@@ -103,7 +103,7 @@ case 5
         preds(1).b = [-4.5 0 0]; 
         
         preds(2).str='i_1'; %I_1<=0.04
-        preds(2).A = [0 40 0 ];
+        preds(2).A = [0 0.02 0 ];
         preds(2).b = [0 0.04 0]; 
         propName=' ([] G >=4.5 /\ []_[0, 40] i<=0.04) ';
         fName='Data-05.txt';
@@ -118,7 +118,7 @@ case 6
         preds(1).b = [9 0 0]; 
         
         preds(2).str='i_1'; %I_1=0.2
-        preds(2).A = [0 40 0 ];
+        preds(2).A = [0 0.02 0 ];
         preds(2).b = [0 0.2 0]; 
         propName=' (G<=9 /\ i<=0.2) ';
         fName='Data-04.txt';
