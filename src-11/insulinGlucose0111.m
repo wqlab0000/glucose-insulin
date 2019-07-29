@@ -26,8 +26,8 @@ disp(' 1. G <= 9 ' )
 disp(' 2. G >= 4.5')
 disp(' 3. I >= 0.04 ' )
 disp(' 4. I <= 0.2 ')
-disp(' 5. G >=4.5 /\ i>=0.04' )
-disp(' 6. G<=9 /\ i<=0.2')
+% disp(' 5. G >=4.5 /\ i>=0.04' )
+% disp(' 6. G<=9 /\ i<=0.2')
 
 
 
@@ -39,7 +39,7 @@ opt = input( 'Please select an option : ')
 disp('You selected')
 disp(opt)
 
-if (opt < 1 || opt > 6) 
+if (opt < 1 || opt > 4) 
     disp('Not a legal option!')
     return
 end
@@ -94,35 +94,35 @@ case 4
 
 
         
-case 5
+% case 5
         
-        scale = 1;
-        phi = '[] i_1 /\ [] g_1';
+%         scale = 1;
+%         phi = '[] i_1 /\ [] g_1';
         
-        preds(1).str='g_1'; %G_1>=4.5
-        preds(1).A = [-1 0 0 ];
-        preds(1).b = -4.5; 
+%         preds(1).str='g_1'; %G_1>=4.5
+%         preds(1).A = [-1 0 0 ];
+%         preds(1).b = -4.5; 
         
-        preds(2).str='i_1'; %I_1<=0.14
-        preds(2).A = [0 1 0];
-        preds(2).b =  0.14; 
-        propName=' ([] G >=4.5 /\ [] i<=0.14) ';
-        fName='Data-05.txt';
+%         preds(2).str='i_1'; %I_1<=0.14
+%         preds(2).A = [0 1 0];
+%         preds(2).b =  0.14; 
+%         propName=' ([] G >=4.5 /\ [] i<=0.14) ';
+%         fName='Data-05.txt';
         
-case 6
+% case 6
         
-        scale = 1;
-        phi = '[] i_2 -> [] g_2';
+%         scale = 1;
+%         phi = '[] i_2 -> [] g_2';
         
-        preds(1).str='g_2'; %G_1<=9
-        preds(1).A = [1 0 0];
-        preds(1).b = 9 ; 
+%         preds(1).str='g_2'; %G_1<=9
+%         preds(1).A = [1 0 0];
+%         preds(1).b = 9 ; 
         
-        preds(2).str='i_2'; %I_1>=0.04
-        preds(2).A = [0 -1 0];
-        preds(2).b = -0.04; 
-        propName=' (G<=9 /\ i>=0.04) ';
-        fName='Data-04.txt';
+%         preds(2).str='i_2'; %I_1>=0.04
+%         preds(2).A = [0 -1 0];
+%         preds(2).b = -0.04; 
+%         propName=' (G<=9 /\ i>=0.04) ';
+%         fName='Data-04.txt';
         
         
     
