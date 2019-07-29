@@ -1,3 +1,8 @@
+insulinGlucose0111.m is a matlab code file.
+insulinGlucose.mdl is a insulin glucose model used in matlab.
+load both files in matlab and press run button.
+
+Choose case numbers 1,  scaled robustness is -0.687171
 Case 1:
 Glucose level trace G_1<=9 
 Robustness scale = 1
@@ -11,6 +16,8 @@ Meal GI announced: 50.000000, actual 50.000000
 Calibration Error: 0.068483
 result show in Data-G1.fig
 
+
+Choose case numbers 2,  scaled robustness is -1.613216
 Case 2:
 Glucose level trace G_2>=4.5
 Robustness scale = 2
@@ -24,7 +31,7 @@ Meal GI announced: 50.000000, actual 50.000000
 Calibration Error: -0.054536
 result show in Data-G2.fig
 
-
+Choose case numbers 3,  scaled robustness is -0.500000
 Case 3:
 Insulin dose trace I_1>=0.04
 Robustness scale = 50
@@ -38,7 +45,7 @@ Meal GI announced: 50.000000, actual 50.000000
 Calibration Error: 0.065726 
 result show in Data-I1.fig
 
-
+Choose case numbers 4,  scaled robustness is -0.432155
 Case 4:
 insulin dose trace I_2<=0.14
 Robustness scale = 100
