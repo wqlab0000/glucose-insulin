@@ -22,8 +22,8 @@ cp_array=[1 1 1 1 1 1 1 1 1 1];
 
 disp(' What would you like to explore ? ')
 
-disp(' 1. scale=2, A = [-1 0 0], b = -4.5' )
-disp(' 2. scale=1, A = [-0.9 0 0], b = -4.5')
+disp(' 1. scale=2, trace G_1>=4.5 ' )
+disp(' 2. scale=1, trace G_1>=4.5/0.9 ')
 
 
 
@@ -59,7 +59,7 @@ case 2
         scale = 1;
         phi = '[] g_2';
         
-        preds(1).str='g_2'; %G_1>=4.5
+        preds(1).str='g_2'; %G_1>=4.5/0.9
         preds(1).A = [-0.9 0 0 ];
         preds(1).b = -4.5; 
         propName='(G_2>=4.5)';
