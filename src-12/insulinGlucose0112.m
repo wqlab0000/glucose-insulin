@@ -23,7 +23,7 @@ cp_array=[1 1 1 1 1 1 1 1 1 1];
 disp(' What would you like to explore ? ')
 
 disp(' 1. scale=2, trace G_1>=4.5 ' )
-disp(' 2. scale=1, trace G_1>=4.5/0.9 ')
+disp(' 2. scale=1, trace G_1>=4.5/0.9 = 5 ')
 
 
 
