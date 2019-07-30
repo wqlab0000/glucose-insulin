@@ -25,7 +25,7 @@ disp(' What would you like to explore ? ')
 disp(' 1. G <= 9 ' )
 disp(' 2. G >= 4.5')
 disp(' 3. I >= 0.04 ' )
-disp(' 4. I <= 0.2 ')
+disp(' 4. I <= 0.14 ')
 % disp(' 5. G >=4.5 /\ i>=0.04' )
 % disp(' 6. G<=9 /\ i<=0.2')
 
@@ -162,14 +162,11 @@ fid = fopen(fName,'a');
 
     figure ;
     title('Run #'+num2str(i));
-    subplot(1,3,1);
+    subplot(1,2,1);
     plot(T, Y(:,1));
-    subplot(1,3,2);
-    plot(T, 50 * Y(:,2));
-    subplot(1,3,3);
+    subplot(1,2,2);
     plot(T, Y(:,2));
-%     subplot(1,3,3);
-%     plot(T, Y(:,3));
+    
          
    
    fprintf (fid,' Best input for simulation run # %d\n',i);
