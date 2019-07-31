@@ -26,7 +26,8 @@ To setup S-TaLiRo run the following in the Matlab command window:
 setup_staliro
 ```
 
-Below is the table of the experiments file names and contents
+Below is the table of the experiments file names and contents:
+src-11 is the most complicated one and detail explanation can be found in the src-11 file readme.txt.
 
 
 | File name     | Specification | Actual Changed Condition      | Contents               |
