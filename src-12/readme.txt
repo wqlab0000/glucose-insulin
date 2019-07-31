@@ -13,7 +13,6 @@ Robustness: -1.704495, Runtime: 2.091199 seconds
  
  Case 1:
 Glucose level trace G_2>=4.5/0.9 
-Robustness scale = 1
 Original Robustness: -1.383718
 Robustness: -1.383718, Runtime: 2.108372 seconds
  Meal time announced: 40.000000, actual: 40.000000 
