@@ -26,9 +26,9 @@ To setup S-TaLiRo run the following in the Matlab command window:
 setup_staliro
 ```
 
-Below is the table of the experiments file names and contents:
-src-11 is the most complicated one and detail explanation can be found in the src-11 file readme.txt.
-Note: We only showed the actual changed conditions here, all the planned conditions can be found in the code. 
+Below is the table of the experimental file names and contents:\
+src-11 is the most complicated one and detail explanation can be found in the src-11 file readme.txt.\
+Note: We only showed the actual changed conditions here, all the planned conditions can be found in the code. \
 (CHO is the meal carbohydrates)
 
 | File name     | Specification | Actual Changed Condition      | Contents               |
