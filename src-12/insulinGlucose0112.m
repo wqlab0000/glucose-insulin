@@ -56,7 +56,6 @@ case 1
         fName='Data-02.txt';
 case 2
         
-        scale = 1;
         d = 0.9;
         phi = '[] g_2';
         
