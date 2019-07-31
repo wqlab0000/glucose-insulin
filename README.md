@@ -41,4 +41,4 @@ Note: We only showed the actual changed conditions here, all the planned conditi
 | src-7  |  G_1 >= 4.5 /\ G_2 <= 9 | CHO range is [160 200]  |results & figure & code|
 | src-8  | case 1: scale= 2; G_1 >= 4.5 ; case 2: scale= 1; G_2 <= 9 |CHO range is [160 200]  |results & figures & code|
 | src-11  |1: G_1<=9; 2: G_2>=4.5;3:I_1>=0.04; 4: I_2<=0.14 with scaled robustness| CHO range is [160 200] |results & figures & code|
-| src-12  |1: G_2>=4.5; 2: G_2>=4.5/0.9=5  |CHO range is [100 140] lower than planned|results & figures & code|
+| src-12  |1: G_2>=4.5; 2: G_2>=4.5/d  |CHO range is [100 140] lower than planned|results & figures & code|
