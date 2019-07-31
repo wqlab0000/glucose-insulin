@@ -31,7 +31,7 @@ src-11 is the most complicated one and detail explanation can be found in the sr
 Note: We only showed the actual changed conditions here, all the planned conditions can be found in the code. \
 (CHO is the meal carbohydrates)
 
-| File name     | Specification | Actual Changed Condition      | Contents               |
+| File name     | Trace Specification | Actual Changed Condition      | Contents               |
 | ------------- | ---------------|--------------- |------------------------|
 | src  |  G_1 >= 4.5 /\ G_2 <= 9| CHO is 200 higher than planned| results & figure & code|
 | src-3  | G_1 >= 4.5 /\ G_2 <= 9| CHO range is [100 200] |results & figure & code|
