@@ -1,6 +1,6 @@
 
 Case 1:
-Glucose level trace G_2>=4.5
+Glucose level trace G_1>=4.5
 Robustness scale = 2
 Original Robustness: -0.85225
 Robustness: -1.704495, Runtime: 2.091199 seconds
