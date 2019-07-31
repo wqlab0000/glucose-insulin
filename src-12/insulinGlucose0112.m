@@ -23,7 +23,9 @@ cp_array=[1 1 1 1 1 1 1 1 1 1];
 disp(' What would you like to explore ? ')
 
 disp(' 1. scale=2, trace G_1>=4.5 ' )
-disp(' 2. scale=1, trace G_1>=4.5/d ')
+disp(' 2. scale=1, trace G_1>=4.5/d, d=0.9')
+disp(' 2. scale=1, trace G_1>=4.5/d, d=0.8 ')
+
 
 
 
@@ -35,7 +37,7 @@ opt = input( 'Please select an option : ')
 disp('You selected')
 disp(opt)
 
-if (opt < 1 || opt > 2) 
+if (opt < 1 || opt > 3) 
     disp('Not a legal option!')
     return
 end
@@ -53,9 +55,9 @@ case 1
         preds(1).A = [-1 0 0 ];
         preds(1).b = -4.5; 
         propName='(G_2>=4.5)';
-        fName='Data-02.txt';
+        fName='Data-01.txt';
 case 2
-        
+        scale = 1;
         d = 0.9;
         phi = '[] g_2';
         
@@ -65,6 +67,16 @@ case 2
         propName='(G_2>=4.5)';
         fName='Data-02.txt';
 
+case 3
+        scale = 1;
+        d = 0.8;
+        phi = '[] g_3';
+        
+        preds(1).str='g_3'; %G_1>=4.5/0.8
+        preds(1).A = [-d 0 0 ];
+        preds(1).b = -4.5; 
+        propName='(G_3>=4.5)';
+        fName='Data-03.txt';
 
 
 end
