@@ -13,7 +13,7 @@ input_range = [40 40;   % meal time announced
                 40 40;   % meal time actual
                 30 30;  % meal duration actual
                150 150; % meal carbohydrates actual
-                40 60;   % meal GI factor actualal pha=1;
+                40 60;   % simulation pick time
                 -.1 .1];   % calibration error in CGM monitor
 
 cp_array=[1 1 1 1 1 1 1 1 1 1];
