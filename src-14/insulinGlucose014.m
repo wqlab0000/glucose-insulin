@@ -28,11 +28,6 @@ disp(' 2. G >= 4.5/d, d= 0.9')
 disp(' 3. G >= 4.5/d, d= 0.8')
 
 
-
-
-
-
-
 disp(' Please select option: ' )
 opt = input( 'Please select an option : ')
 
