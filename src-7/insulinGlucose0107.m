@@ -21,12 +21,6 @@ cp_array=[1 1 1 1 1 1 1 1 1 1];
 
 disp(' What would you like to explore ? ')
 disp(' 1. G >= 4.5 /\ G <= 9 ' )
-% disp(' 2. G >= 2.5 /\ G <= 17 after time 200 ')
-% disp(' 3. G <= 17 /\ G <= 7 after time 200 ')
-% disp(' 4. G <= 17 /\ G <= 7 in time [60,200] ')
-% disp(' 5. i >= 6.5 \/ G <= 25 after time 200 ')
-% disp(' 6. i >= 1.8 \/ G <= 12 after time 200 ')
-% disp(' 7. i <= 1.4 \/ G >= 3 after time 200 ')
 
 
 disp(' Please select option: ' )
@@ -35,16 +29,8 @@ opt = input( 'Please select an option : ')
 disp('You selected')
 disp(opt)
 
-if (opt < 1 || opt > 4) 
-    disp('Not a legal option!')
-    return
-end
 
 
-switch opt
-
-
-   case 1
         phi = '[] g_1 /\ [] g_2';
         preds(1).str='g_1'; % G_1>=4.5
         preds(1).A = [-1 0 0];
@@ -56,40 +42,7 @@ switch opt
         propName=' (G_1 >= 4.5 /\ G_2 <= 9 ) ';
         fName='Data-01.txt';
         
-%     case 2
-%         phi = '[] g_1  /\ []_[200,400] g_2';
-%         preds(1).str='a';
-%         preds(1).A = [-1 0 0 ];
-%         preds(1).b = [-2.5 0 0 ];
-%         preds(2).str = 'b';
-%         preds(2).A = [1 0 0 ];
-%         preds(2).b = [17 0 0 ];
-        
-%         propName=' (G_1 >= 2.5 /\ G_2 <= 17 after time 200) ';
-%         fName = 'Data-02.txt'
-%     case 3
-%         phi = '[] g_1 /\ []_[200,400] g_2;
-%         preds(1).str = 'g_1';
-%         preds(1).A = [1 0 0 ];
-%         preds(1).b = [17 0 0 ];
-%         preds(2).str = 'g_2';
-%         preds(2).A = [1 0 0 ];
-%         preds(2).b = [7 0 0 ];
-%         propName=' (G_1 <= 17 /\ G_2 <= 7 after time 200 ) ';
-%         fName = 'Data-03.txt';
-%     case 4
-%         phi = '[] g_1  /\ []_[60,200] g_2';
-%         preds(1).str='g_1';
-%         preds(1).A = [1 0 0 ];
-%         preds(1).b = [17 0 0 ];
-%         preds(2).str = 'g_2';
-%         preds(2).A = [1 0 0 ];
-%         preds(2).b = [7 0 0 ];
-%         propName=' ( G_1 <= 17 /\ G_2 <= 7 in time [60,200]  ) ';
-%         fName = 'Data-04.txt';
-        
- 
-end
+
 
 time = 400;
 opt = staliro_options();
@@ -127,12 +80,11 @@ fid = fopen(fName,'a');
 
     figure ;
     title('Run #'+num2str(i));
-    subplot(1,3,1);
+    subplot(1,2,1);
     plot(T , Y(:,1) );
-    subplot(1,3,2);
+    subplot(1,2,2);
     plot(T, Y(:,2));
-    subplot(1,3,3);
-    plot(T, Y(:,3));
+  
          
    
    fprintf (fid,' Best input for simulation run # %d\n',i);
