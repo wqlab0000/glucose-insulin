@@ -27,7 +27,6 @@ disp(' 3. G_3 <= 9, A = 1, b = 9' )
 
 
 
-
 disp(' Please select option: ' )
 opt = input( 'Please select an option : ')
 
@@ -43,7 +42,7 @@ end
 switch opt
 
 
-   case 1
+     case 1
         phi = '[] g_1';
         preds(1).str='g_1'; % G_1>=4.5
         preds(1).A = [-2 0 0];
@@ -70,6 +69,7 @@ switch opt
         propName=' (G_3 <= 9 ) ';
         fName='Data-03.txt';
  
+       
 end
 
 time = 400;
@@ -88,12 +88,32 @@ opt.spec_space='Y';
 opt.interpolationtype={'const'};
 opt;
 
-opt.optimization_solver = 'SA_Taliro';
+disp(' ')
+disp(' 1. Simulated Annealing with Monte Carlo Sampling')
+disp(' 2. Uniform Random Sampling')
+disp(' 3. Multi-Start ')
+disp(' 4. Dynamic Programming ')
+search_id = input('Choose a search algorithm:');
+
+
+if search_id==1
+    opt.optimization_solver = 'SA_Taliro';
+elseif search_id==2
+    opt.optimization_solver = 'UR_Taliro';
+elseif search_id == 3
+  opt.optimization_solver = 'MS_Taliro';
+elseif search_id == 4
+   opt.taliro = 'dp_taliro';
+else 
+    error('Search option not supported')
+end
+
+% opt.optimization_solver = 'SA_Taliro';
 % opt.optimization_solver = 'MS_Taliro';
 % opt.optimization_solver = 'UR_Taliro';
 
 % opt.optim_params.n_tests=1000;
-opt.optim_params.n_tests=10;
+opt.optim_params.n_tests=25;
 % opt.taliro = 'dp_taliro';
 
 
