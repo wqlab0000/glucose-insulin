@@ -108,13 +108,9 @@ else
     error('Search option not supported')
 end
 
-% opt.optimization_solver = 'SA_Taliro';
-% opt.optimization_solver = 'MS_Taliro';
-% opt.optimization_solver = 'UR_Taliro';
 
-% opt.optim_params.n_tests=1000;
+
 opt.optim_params.n_tests=25;
-% opt.taliro = 'dp_taliro';
 
 
 fid = fopen(fName,'a');
