@@ -1,6 +1,5 @@
 clear 
-mdl = 'insulinGlucose';
-
+mdl = 'insulinGlucoseSimHumanCtrl2';
 
 load_system(mdl);
 warning off all
@@ -20,9 +19,8 @@ cp_array=[1 1 1 1 1 1 1 1 1 1];
 
 disp(' What would you like to explore ? ')
 
-disp(' 1. G_1 >= 4.5, A = -2, b = -9' )
-disp(' 2. G_1 >= 4.5, A = -1, b = -4.5 ' )
-disp(' 3. G_3 <= 9, A = 1, b = 9' )
+disp(' 1. G_1 >= 4.5 ' )
+disp(' 2. G_2 <= 9 ' )
 
 
 
@@ -33,7 +31,7 @@ opt = input( 'Please select an option : ')
 disp('You selected')
 disp(opt)
 
-if (opt < 1 || opt > 4) 
+if (opt < 1 || opt > 2) 
     disp('Not a legal option!')
     return
 end
@@ -41,33 +39,24 @@ end
 
 switch opt
 
-
-     case 1
-        phi = '[] g_1';
-        preds(1).str='g_1'; % G_1>=4.5
-        preds(1).A = [-2 0 0];
-        preds(1).b = -9; 
-      
-        propName=' (G_1 >= 4.5) ';
-        fName='Data-01.txt';
         
-  case 2
+  case 1
         phi = '[] g_1';
         preds(1).str='g_1'; 
         preds(1).A = [-1 0 0];
         preds(1).b = -4.5; 
       
         propName=' (G_2 >= 4.5 ) ';
-        fName='Data-02.txt';
+        fName='Data-01.txt';
 
-  case 3
-        phi = '[] g_3';
-        preds(1).str='g_3'; % G_3<=9
+  case 2
+        phi = '[] g_2';
+        preds(1).str='g_2'; % G_2<=9
         preds(1).A = [1 0 0];
         preds(1).b = 9; 
       
-        propName=' (G_3 <= 9 ) ';
-        fName='Data-03.txt';
+        propName=' (G_2 <= 9 ) ';
+        fName='Data-02.txt';
  
        
 end
@@ -109,7 +98,6 @@ else
 end
 
 
-
 opt.optim_params.n_tests=25;
 
 
@@ -126,8 +114,7 @@ fid = fopen(fName,'a');
     title('Run #'+num2str(i));
     subplot(1,2,1);
     plot(T , Y(:,1) );
-%     subplot(1,2,2);
-%     plot(T, Y(:,2));
+
 
 
 
@@ -135,20 +122,24 @@ fid = fopen(fName,'a');
 
    if phi == '[] g_1' % trace G_1>=4.5 
       
-    if rob >=0   % if robustness is zero or a positive value, glucose level is equal or over 4.5.
-      
-    rob = rob;   % robustness keep the original positive value. 
+     if rob >=0   % if robustness is zero or a positive value, glucose level is equal or over 4.5.
+       
+        rob = rob;   % robustness keep the original positive value. 
     
-    elseif rob < 0 && rob >= -2 % if robustness is less than zero but over -2, glucose level is within [2.5 4.5] --dangerous
+     elseif rob < 0 && rob >= -2 % if robustness is less than zero but over -2, glucose level is within [2.5 4.5] --dangerous
     
         rob = 2 * rob; % we scale the robustness to twice larger than the original robustness.
+        
+     else rob = -9999;    %if robustness is less than 2, glucose level is within [0, 2.5)-- extremely dangerous
     
-    else rob = -9999;  % if robustness is less than 2, glucose level is within [0, 2.5)-- extremely dangerous
-                       % robustness is set to negative infinity, here we set to -9999
-                       
-                       
-  end
-  end
+                           % robustness is set to negative infinity, here we set to -9999
+
+                      
+     end
+   end
+  
+
+   
     
    
    fprintf (fid,' Best input for simulation run # %d\n',i);
