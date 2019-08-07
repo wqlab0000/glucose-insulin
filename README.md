@@ -35,6 +35,7 @@ Note: We only showed the actual changed conditions here, all the planned conditi
 | ------------- | ---------------|--------------- |------------------------|
 | src  |  G_1 >= 4.5 /\ G_2 <= 9| CHO is 200 more than planned| results & figure & code|
 | src-1.2  |  G_1 >= 4.5 | CHO is 200 more than planned| results & figure & code|
+| src-1.3  |  1. G_1 >= 4.5 /\ G_2 <= 9; 2. G_1 >= 9/2 /\ G_2 <= 9 | CHO is 200 more than planned| results & figure & code|
 | src-3  | G_1 >= 4.5 /\ G_2 <= 9| CHO range is [100 200] |results & figure & code|
 | src-3.2  | G_1 >= 4.5 | CHO range is [100 200] |results & figure & code|
 | src-4  | G_1 >= 4.5 /\ G_2 <= 9| meal duration [20 40]  |results & figure & code|
@@ -50,7 +51,7 @@ Note: We only showed the actual changed conditions here, all the planned conditi
 | src-12  |1: G_2>=4.5; 2: G_2>=4.5/d; 2: G_3>=4.5/d  |CHO range is [100 140] less than planned CHO|results & figures & code|
 | src-14  |1: G_2>=4.5; 2: G_2>=4.5/d; 2: G_3>=4.5/d  |CHO range is [70 100] less than planned CHO|results & figures & code|
 | src-15  |G_1 >= 4.5/d /\ G_2 <= 9; d= 0.8  |CHO range is [160 200] more than planned CHO|results & figures & code|
-| src-15.2  |1.G_1 >= 4.5 /\ G_2 <= 9; 2. G_1 >= 9 /\ G_2 <= 9;  |CHO range is [160 200] more than planned CHO|results & figures & code|
+| src-15.2  |1.G_1 >= 4.5 /\ G_2 <= 9; 2. G_1 >= 9/2 /\ G_2 <= 9;  |CHO range is [160 200] more than planned CHO|results & figures & code|
 | src-16  |1. G_1 >= 4.5; 2. G_2 <= 9; with scaled robustness |CHO range is [30 40] much less than planned CHO|results & figures & code|
 
 
