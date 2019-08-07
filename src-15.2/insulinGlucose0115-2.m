@@ -55,14 +55,14 @@ switch opt
         
    case 2
         phi = '[] g_1 /\ [] g_2';
-        preds(1).str='g_1'; % G_1>=4.5
+        preds(1).str='g_1'; % 
         preds(1).A = [-2 0 0];
         preds(1).b = [-9 0 0]; 
         preds(2).str ='g_2'; % G_2<=9
         preds(2).A = [1 0 0 ];
         preds(2).b = [9 0 0];
 
-        propName=' (G_1 >= 4.5 /\ G_2 <= 9 ) ';
+        propName=' (G_1 >= 9 /\ G_2 <= 9 ) ';
         fName='Data-02.txt';
         
  
