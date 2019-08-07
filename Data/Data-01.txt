@@ -1,0 +1,38 @@
+1.3 CHO = 200 case 1 
+Robustness: -3.492336, Runtime: 2.115531 seconds
+ Meal time announced: 40.000000, actual: 40.000000 
+ Meal duration announced: 20.000000, actual: 20.000000 
+ Meal carbohydrate announced: 150.000000, actual: 200.000000 
+ Meal GI announced: 50.000000, actual 50.000000 
+ Calibration Error: 0.005900 
+
+
+3.3 CHO = [100 200] case 1 
+Robustness: -0.895425, Runtime: 2.154787 seconds
+ Meal time announced: 40.000000, actual: 40.000000 
+ Meal duration announced: 30.000000, actual: 30.000000 
+ Meal carbohydrate announced: 150.000000, actual: 100.300665 
+ Meal GI announced: 50.000000, actual 50.000000 
+ Calibration Error: 0.024665 
+
+
+
+15.2  CHO = [160 200] case 1 
+Robustness: -1.485881, Runtime: 2.039750 seconds
+ Meal time announced: 40.000000, actual: 40.000000 
+ Meal duration announced: 30.000000, actual: 30.000000 
+ Meal carbohydrate announced: 150.000000, actual: 195.895583 
+ Meal GI announced: 50.000000, actual 50.000000 
+ Calibration Error: 0.047908 
+
+
+16.2 CHO = [30 40] case 1 
+Robustness: -1.672175, Runtime: 1.932060 seconds
+ Meal time announced: 40.000000, actual: 40.000000 
+ Meal duration announced: 30.000000, actual: 30.000000 
+ Meal carbohydrate announced: 150.000000, actual: 30.964300 
+ Meal GI announced: 50.000000, actual 50.000000 
+ Calibration Error: -0.080179 
+
+
+
