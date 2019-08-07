@@ -2,7 +2,7 @@ src-15.2 results：
 Note, although the CHO range for both case 1 & 2 are [160 200].
 Case 1 & 2  actual meal CHO are different.
 
-So the result we got are different. 
+So the results we got are different. 
 
 
 Case 1 
