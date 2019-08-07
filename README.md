@@ -33,6 +33,7 @@ Note: We only showed the actual changed conditions here, all the planned conditi
 
 | File name     | Trace Specification | Actual Changed Condition      | Contents               |
 | ------------- | ---------------|--------------- |------------------------|
+| data |  -|-| summarize 1.3, 3.3, 15.2, 16.2 file data |
 | src  |  G_1 >= 4.5 /\ G_2 <= 9| CHO is 200 more than planned| results & figure & code|
 | src-1.2  |  G_1 >= 4.5 | CHO is 200 more than planned| results & figure & code|
 | src-1.3  |  1. G_1 >= 4.5 /\ G_2 <= 9; 2. G_1 >= 9/2 /\ G_2 <= 9 | CHO is 200 more than planned| results & figure & code|
