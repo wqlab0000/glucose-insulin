@@ -63,7 +63,7 @@ switch opt
         preds(2).A = [1 0 0 ];
         preds(2).b = [9 0 0];
 
-        propName=' (G_1 >= 4.5 /\ G_2 <= 9 ) ';
+        propName=' (G_1 >= 9 /\ G_2 <= 9 ) ';
         fName='Data-02.txt';
         
  
