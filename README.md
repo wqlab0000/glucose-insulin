@@ -38,6 +38,7 @@ Note: We only showed the actual changed conditions here, all the planned conditi
 | src-1.3  |  1. G_1 >= 4.5 /\ G_2 <= 9; 2. G_1 >= 9/2 /\ G_2 <= 9 | CHO is 200 more than planned| results & figure & code|
 | src-3  | G_1 >= 4.5 /\ G_2 <= 9| CHO range is [100 200] |results & figure & code|
 | src-3.2  | G_1 >= 4.5 | CHO range is [100 200] |results & figure & code|
+| src-3.3  |  1. G_1 >= 4.5 /\ G_2 <= 9; 2. G_1 >= 9/2 /\ G_2 <= 9 | CHO is [100 200] planned is 150| results & figure & code|
 | src-4  | G_1 >= 4.5 /\ G_2 <= 9| meal duration [20 40]  |results & figure & code|
 | src-4.2  | G_1 >= 4.5| meal duration [20 40]  |results & figure & code|
 | src-5  | G_1 >= 4.5 /\ G_2 <= 9| simulation glucose pick time [40 60]  |results & figure & code|
