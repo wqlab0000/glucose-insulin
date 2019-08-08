@@ -90,4 +90,141 @@ propName: phi = (G_1 >= 9 /\ G_2 <= 9 )
  Meal GI announced: 50.000000, actual 50.000000 
  Calibration Error: -0.038532 
 ------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+file name: 15.2-case2.txt 
+propName: phi = (G_1 >= 9 /\ G_2 <= 9 )  
+
+ preds(1).str: g_1 
+preds(1).A:[  -2  0  0]
+ preds(1).b: -9.000000 
+
+ preds(2).str: g_2 
+preds(2).A:[ 1 0 0]
+ preds(2).b: 9.000000 
+
+ starting opt runs
+i: 1 
+propName: phi = (G_1 >= 9 /\ G_2 <= 9 )  
+ 
+ Robustness: -1.658895, Runtime: 2.009980 seconds
+ 
+ Meal time announced: 40.000000, actual: 40.000000 
+ Meal duration announced: 30.000000, actual: 30.000000 
+ Meal carbohydrate announced: 150.000000, actual: 199.879134 
+ Meal GI announced: 50.000000, actual 50.000000 
+ Calibration Error: 0.065784 
+------------------------------------------------------------------------------------
+i: 2 
+propName: phi = (G_1 >= 9 /\ G_2 <= 9 )  
+ 
+ Robustness: -1.624134, Runtime: 2.001547 seconds
+ 
+ Meal time announced: 40.000000, actual: 40.000000 
+ Meal duration announced: 30.000000, actual: 30.000000 
+ Meal carbohydrate announced: 150.000000, actual: 199.080776 
+ Meal GI announced: 50.000000, actual 50.000000 
+ Calibration Error: -0.099361 
+------------------------------------------------------------------------------------
+i: 3 
+propName: phi = (G_1 >= 9 /\ G_2 <= 9 )  
+ 
+ Robustness: -1.660696, Runtime: 1.990919 seconds
+ 
+ Meal time announced: 40.000000, actual: 40.000000 
+ Meal duration announced: 30.000000, actual: 30.000000 
+ Meal carbohydrate announced: 150.000000, actual: 199.920499 
+ Meal GI announced: 50.000000, actual 50.000000 
+ Calibration Error: 0.020807 
+------------------------------------------------------------------------------------
+i: 4 
+propName: phi = (G_1 >= 9 /\ G_2 <= 9 )  
+ 
+ Robustness: -1.598041, Runtime: 2.016661 seconds
+ 
+ Meal time announced: 40.000000, actual: 40.000000 
+ Meal duration announced: 30.000000, actual: 30.000000 
+ Meal carbohydrate announced: 150.000000, actual: 198.479645 
+ Meal GI announced: 50.000000, actual 50.000000 
+ Calibration Error: 0.048749 
+------------------------------------------------------------------------------------
+i: 5 
+propName: phi = (G_1 >= 9 /\ G_2 <= 9 )  
+ 
+ Robustness: -1.659141, Runtime: 2.002482 seconds
+ 
+ Meal time announced: 40.000000, actual: 40.000000 
+ Meal duration announced: 30.000000, actual: 30.000000 
+ Meal carbohydrate announced: 150.000000, actual: 199.884786 
+ Meal GI announced: 50.000000, actual 50.000000 
+ Calibration Error: -0.030358 
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+file name: 15.2-case2.txt 
+propName: phi = (G_1 >= 9 /\ G_2 <= 9 )  
+
+ preds(1).str: g_1 
+preds(1).A:[  -2  0  0]
+ preds(1).b: -9.000000 
+
+ preds(2).str: g_2 
+preds(2).A:[ 1 0 0]
+ preds(2).b: 9.000000 
+
+ starting opt runs
+i: 1 
+propName: phi = (G_1 >= 9 /\ G_2 <= 9 )  
+ 
+ Robustness: -1.647242, Runtime: 2.015197 seconds
+ 
+ Meal time announced: 40.000000, actual: 40.000000 
+ Meal duration announced: 30.000000, actual: 30.000000 
+ Meal carbohydrate announced: 150.000000, actual: 199.611512 
+ Meal GI announced: 50.000000, actual 50.000000 
+ Calibration Error: -0.049101 
+------------------------------------------------------------------------------------
+i: 2 
+propName: phi = (G_1 >= 9 /\ G_2 <= 9 )  
+ 
+ Robustness: -1.659654, Runtime: 2.068846 seconds
+ 
+ Meal time announced: 40.000000, actual: 40.000000 
+ Meal duration announced: 30.000000, actual: 30.000000 
+ Meal carbohydrate announced: 150.000000, actual: 199.896575 
+ Meal GI announced: 50.000000, actual 50.000000 
+ Calibration Error: 0.026753 
+------------------------------------------------------------------------------------
+i: 3 
+propName: phi = (G_1 >= 9 /\ G_2 <= 9 )  
+ 
+ Robustness: -1.642682, Runtime: 2.057607 seconds
+ 
+ Meal time announced: 40.000000, actual: 40.000000 
+ Meal duration announced: 30.000000, actual: 30.000000 
+ Meal carbohydrate announced: 150.000000, actual: 199.506778 
+ Meal GI announced: 50.000000, actual 50.000000 
+ Calibration Error: 0.034351 
+------------------------------------------------------------------------------------
+i: 4 
+propName: phi = (G_1 >= 9 /\ G_2 <= 9 )  
+ 
+ Robustness: -1.590331, Runtime: 2.009448 seconds
+ 
+ Meal time announced: 40.000000, actual: 40.000000 
+ Meal duration announced: 30.000000, actual: 30.000000 
+ Meal carbohydrate announced: 150.000000, actual: 198.302004 
+ Meal GI announced: 50.000000, actual 50.000000 
+ Calibration Error: -0.030142 
+------------------------------------------------------------------------------------
+i: 5 
+propName: phi = (G_1 >= 9 /\ G_2 <= 9 )  
+ 
+ Robustness: -1.566344, Runtime: 2.014063 seconds
+ 
+ Meal time announced: 40.000000, actual: 40.000000 
+ Meal duration announced: 30.000000, actual: 30.000000 
+ Meal carbohydrate announced: 150.000000, actual: 197.749267 
+ Meal GI announced: 50.000000, actual 50.000000 
+ Calibration Error: -0.032688 
+------------------------------------------------------------------------------------
+
 
