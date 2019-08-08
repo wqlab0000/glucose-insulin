@@ -1,0 +1,46 @@
+------------------------------------------------------------------------------------
+file name: 15.2-case2.txt 
+propName: phi = (G_1 >= 9 /\ G_2 <= 9 )  
+
+ preds(1).str: g_1 
+preds(1).A:[  -2  0  0]
+ preds(1).b: -9.000000 
+
+ preds(2).str: g_2 
+preds(2).A:[ 1 0 0]
+ preds(2).b: 9.000000 
+
+ starting opt runs
+i: 1 
+propName: phi = (G_1 >= 9 /\ G_2 <= 9 )  
+ 
+ Robustness: -1.656300, Runtime: 8.659804 seconds
+ 
+ Meal time announced: 40.000000, actual: 40.000000 
+ Meal duration announced: 30.000000, actual: 30.000000 
+ Meal carbohydrate announced: 150.000000, actual: 199.819554 
+ Meal GI announced: 50.000000, actual 50.000000 
+ Calibration Error: 0.051870 
+------------------------------------------------------------------------------------
+i: 2 
+propName: phi = (G_1 >= 9 /\ G_2 <= 9 )  
+ 
+ Robustness: -1.636240, Runtime: 6.478354 seconds
+ 
+ Meal time announced: 40.000000, actual: 40.000000 
+ Meal duration announced: 30.000000, actual: 30.000000 
+ Meal carbohydrate announced: 150.000000, actual: 199.358822 
+ Meal GI announced: 50.000000, actual 50.000000 
+ Calibration Error: 0.000053 
+------------------------------------------------------------------------------------
+i: 3 
+propName: phi = (G_1 >= 9 /\ G_2 <= 9 )  
+ 
+ Robustness: -1.489578, Runtime: 2.092733 seconds
+ 
+ Meal time announced: 40.000000, actual: 40.000000 
+ Meal duration announced: 30.000000, actual: 30.000000 
+ Meal carbohydrate announced: 150.000000, actual: 195.980697 
+ Meal GI announced: 50.000000, actual 50.000000 
+ Calibration Error: -0.010245 
+------------------------------------------------------------------------------------
