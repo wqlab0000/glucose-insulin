@@ -133,8 +133,7 @@ fprintf (fid, 'i: %d \n' , i);
 fprintf (fid, 'propName: %s \n' , propName); 
 
 
-%    fprintf (fid,  propName, preds(1).str, preds(1).A, preds(1).b, choice );
-%    fprintf (fid,' Best input for simulation run # %d\n',i);
+
    fprintf (fid, ' \n Robustness: %f, Runtime: %f seconds\n', results.run(results.optRobIndex).bestRob,results.run(results.optRobIndex).time);
    fprintf (fid,' \n Meal time announced: %f, actual: %f \n', IT(1,2), IT(1,7));
    fprintf (fid,' Meal duration announced: %f, actual: %f \n', IT(1,3), IT(1,8));
@@ -148,8 +147,6 @@ fprintf (fid, 'propName: %s \n' , propName);
     title('Run #'+num2str(i));
     subplot(1,2,1);
     plot(T, Y(:,1));
-%     subplot(1,2,2);
-%     plot(T, Y(:,2));
 
     
    disp ('Best input for simulation run # ')
