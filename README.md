@@ -55,7 +55,7 @@ Note: We only showed the actual changed conditions here, all the planned conditi
 | src-15  |G >= 4.5/d /\ G <= 9; d= 0.8  |CHO range is [160 200] more than planned CHO|results & figures & code|
 | src-15.2  |1.G >= 4.5 /\ G <= 9; 2. G >= 9/2 /\ G <= 9;  |CHO range is [160 200] more than planned CHO|results & figures & code|
 | src-15.3  |1. 1. G >= 4.5; 2. G<=9; 3. G >= 4.5 /\ G <= 9; 4. 2G >= 9 /\ G <= 9|CHO range is [160 200] or [70 140]|results & figures & code|
-| src-15.3  |1. 1. G >= 4.5; 2. G<=9; 3. G >= 4.5 /\ G <= 9; 4. 2G >= 9 /\ G <= 9|CHO range is [160 200] or [70 140]|scaled results&results & figures & code|
+| src-15.4  |1. 1. G >= 4.5; 2. G<=9; 3. G >= 4.5 /\ G <= 9; 4. 2G >= 9 /\ G <= 9|CHO range is [160 200] or [70 140]|scaled results&results & figures & code|
 | src-16  |1. G >= 4.5; 2. G <= 9; with scaled robustness |CHO range is [30 40] much less than planned CHO 150|results & figures & code|
 | src-16.2  |1. G >= 4.5 /\ G <= 9; 2. G >= 9/2 /\ G <= 9 | CHO is [30 40] much less than planned CHO 150| results & figure & code|
 
