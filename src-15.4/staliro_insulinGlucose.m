@@ -1,36 +1,16 @@
 clear 
-mdl = 'insulinGlucoseSimHumanCtrl2';
+mdl = 'insulinGlucose';
 cp_array=[1 1 1 1 1 1 1 1 1 1];
 
 init_cond = [];
-%input_range = h_input; %heavy meal input
 
-disp(' What would you like to explore ? ')
+type file_name.txt;
 
-disp(' 1. heavy meal input CHO [160 200] ' )
-disp(' 2. light meal input CHO [70 140] ' )
+x = input('\n Input a file name you want to explore \n','s')
 
+input_range = importdata(x); %import input_range data from text file
+[m,n] = size(input_range);
 
-disp(' Please select input: ' )
-select = input( 'Please select : ')
-
-disp('You selected')
-disp(select)
-
-if (select < 1 || select > 2) 
-    disp('Not a legal input!')
-    return
-end
-
-switch select
-   
-    case 1
-        input_range = h_input; %heavy meal input
-        
-        
-    case 2
-        input_range = l_input; %light meal input
-end
 
 
 disp(' What would you like to explore ? ')
@@ -121,23 +101,20 @@ opt.spec_space='Y';
 opt.interpolationtype={'const'};
 opt;
 
-opt.optimization_solver = 'SA_Taliro'; %Simulated Annealing with Monte Carlo Sampling 
-% opt.optimization_solver = 'MS_Taliro'; %Multi-Start
-% opt.optimization_solver = 'UR_Taliro';  %Uniform Random Sampling
+opt.optimization_solver = 'SA_Taliro';
 
 opt.optim_params.n_tests=10; %The total number of tests to be executed
-% opt.taliro = 'dp_taliro';  %Dynamic Programming
+% opt.taliro = 'dp_taliro';
 
 
-mkdir result-15.4 % create a result folder and save output file in result folder
-savePath = '/path/to/folder/result-15.4/'; 
+mkdir 15.4 % create a result folder and save output file in result folder
+savePath = '/path/to/15.4/'; 
 fid = fopen([savePath fName],'at'); 
 result =[fName '\t'];
 
 fprintf (fid,'------------------------------------------------------------------------------------\n');
 fprintf (fid, 'file name: %s \n', fName);
-
-fprintf (fid, '\n starting opt runs\n');
+% fprintf (fid, '\n starting opt runs\n');
 
     
     for i = 1:opt.runs
@@ -178,6 +155,7 @@ fprintf (fid, '\n starting opt runs\n');
     figure ;
     subplot(1,2,1);
     plot(T, Y(:,1));
+
 
     
    disp ('Best input for simulation run # ')
