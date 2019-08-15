@@ -9,9 +9,9 @@ type file_name.txt;
 x = input('\n Input a file name you want to explore \n','s')
 
 input_range = importdata(x); %import input_range data from text file
-[m,n] = size(input_range);
+b = reshape(input_range, 10, 2);
+disp(b)
 
-disp(importdata(x))
 
 disp(' What would you like to explore ? ')
 
@@ -107,14 +107,14 @@ opt.optim_params.n_tests=10; %The total number of tests to be executed
 % opt.taliro = 'dp_taliro';
 
 
+
 mkdir 15.4 % create a result folder and save output file in result folder
-savePath = '/path/to/15.4/'; 
+savePath = '/Users/WenjiQuan/Desktop/trunk/benchmarks/insulinGlucoseHumanCtrlRisk/hovorkaModel/insulinGlucose2/15.4/'; 
 fid = fopen([savePath fName],'at'); 
 result =[fName '\t'];
 
 fprintf (fid,'------------------------------------------------------------------------------------\n');
 fprintf (fid, 'file name: %s \n', fName);
-% fprintf (fid, '\n starting opt runs\n');
 
     
     for i = 1:opt.runs
@@ -137,6 +137,19 @@ fprintf (fid, 'file name: %s \n', fName);
      end
 
      
+     
+   fprintf (fid, '\n Input file name: %s \n', x);
+   fprintf (fid, '%f %f \n', b(1, :)); 
+   fprintf (fid, '%f %f \n', b(2, :));
+   fprintf (fid, '%f %f \n', b(3, :)); 
+   fprintf (fid, '%f %f \n', b(4, :)); 
+   fprintf (fid, '%f %f \n', b(5, :)); 
+   fprintf (fid, '%f %f \n', b(6, :)); 
+   fprintf (fid, '%f %f \n', b(7, :)); 
+   fprintf (fid, '%f %f \n', b(8, :));
+   fprintf (fid, '%f %f \n', b(9, :)); 
+   fprintf (fid, '%f %f \n', b(10, :)); 
+   
      
    fprintf (fid,'\n Meal CHO announced: %f, actual: %f \n', IT(1,4), IT(1,9));
   
