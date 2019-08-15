@@ -11,7 +11,7 @@ x = input('\n Input a file name you want to explore \n','s')
 input_range = importdata(x); %import input_range data from text file
 [m,n] = size(input_range);
 
-
+disp(importdata(x))
 
 disp(' What would you like to explore ? ')
 
