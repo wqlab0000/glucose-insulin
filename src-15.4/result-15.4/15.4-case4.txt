@@ -1,48 +1,84 @@
 ------------------------------------------------------------------------------------
 file name: 15.4-case4.txt 
 
- Meal CHO announced: 150.000000, actual: 220.752072 
+ Input file name: hm_input.txt 
+40.000000 40.000000 
+30.000000 30.000000 
+150.000000 150.000000 
+50.000000 50.000000 
+150.000000 250.000000 
+40.000000 40.000000 
+30.000000 30.000000 
+160.000000 230.000000 
+50.000000 50.000000 
+-0.100000 0.100000 
+
+ Meal CHO announced: 150.000000, actual: 221.779217 
 
  i: 1 
 propName: phi = (2G >= 9 /\ G <= 9 )  
  
- Scaled-Robustness: -2.568276 
- Robustness: -2.568276, Runtime: 2.873571 seconds
+ Scaled-Robustness: -2.613041 
+ Robustness: -2.613041, Runtime: 2.181093 seconds
  
  Meal time announced: 40.000000, actual: 40.000000 
  Meal duration announced: 30.000000, actual: 30.000000 
  Meal GI announced: 50.000000, actual 50.000000 
- Calibration Error: -0.065647 
+ Calibration Error: 0.037706 
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
 file name: 15.4-case4.txt 
 
- Meal CHO announced: 150.000000, actual: 117.255720 
+ Input file name: lm_input.txt 
+40.000000 40.000000 
+30.000000 30.000000 
+150.000000 150.000000 
+50.000000 50.000000 
+150.000000 250.000000 
+40.000000 40.000000 
+30.000000 30.000000 
+70.000000 140.000000 
+50.000000 50.000000 
+-0.100000 0.100000 
+
+ Meal CHO announced: 150.000000, actual: 73.750314 
 
  i: 1 
 propName: phi = (2G >= 9 /\ G <= 9 )  
  
- Scaled-Robustness: -1.697561 
- Robustness: -0.848780, Runtime: 2.176734 seconds
+ Scaled-Robustness: -1.940990 
+ Robustness: -0.970495, Runtime: 2.101451 seconds
  
  Meal time announced: 40.000000, actual: 40.000000 
  Meal duration announced: 30.000000, actual: 30.000000 
  Meal GI announced: 50.000000, actual 50.000000 
- Calibration Error: -0.043467 
+ Calibration Error: 0.032987 
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
 file name: 15.4-case4.txt 
 
- Meal CHO announced: 150.000000, actual: 142.853757 
+ Input file name: ok_input.txt 
+40.000000 40.000000 
+30.000000 30.000000 
+150.000000 150.000000 
+50.000000 50.000000 
+150.000000 250.000000 
+40.000000 40.000000 
+30.000000 30.000000 
+141.000000 159.000000 
+50.000000 50.000000 
+-0.100000 0.100000 
+
+ Meal CHO announced: 150.000000, actual: 142.726767 
 
  i: 1 
 propName: phi = (2G >= 9 /\ G <= 9 )  
  
- Scaled-Robustness: -0.828948 
- Robustness: -0.828948, Runtime: 2.115649 seconds
+ Scaled-Robustness: -0.829047 
+ Robustness: -0.829047, Runtime: 2.312528 seconds
  
  Meal time announced: 40.000000, actual: 40.000000 
  Meal duration announced: 30.000000, actual: 30.000000 
  Meal GI announced: 50.000000, actual 50.000000 
- Calibration Error: 0.042962 
+ Calibration Error: -0.068151 
 ------------------------------------------------------------------------------------
