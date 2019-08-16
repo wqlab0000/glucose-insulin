@@ -126,15 +126,15 @@ fprintf (fid, 'file name: %s \n', fName);
     rob = results.run(results.optRobIndex).bestRob; % robustness value
 
   
-     if  input_range == l_input;
-     if rob >=0   % if robustness is zero or a positive value, glucose level is equal or over 4.5.                   
-        rob = rob;   % robustness keep the original positive value.  
-     elseif rob < 0 && rob >= -2 % if robustness is less than zero but over -2, glucose level is within [2.5 4.5] --dangerous  
-        rob = 2 * rob; % we scale the robustness to twice larger than the original robustness.     
-     else rob = -9999;    %if robustness is less than 2, glucose level is within [0, 2.5)-- extremely dangerous
-                         % robustness is set to negative infinity, here we set to -9999                   
-     end  
-     end
+%      if  input_range == lm_input;
+%      if rob >=0   % if robustness is zero or a positive value, glucose level is equal or over 4.5.                   
+%         rob = rob;   % robustness keep the original positive value.  
+%      elseif rob < 0 && rob >= -2 % if robustness is less than zero but over -2, glucose level is within [2.5 4.5] --dangerous  
+%         rob = 2 * rob; % we scale the robustness to twice larger than the original robustness.     
+%      else rob = -9999;    %if robustness is less than 2, glucose level is within [0, 2.5)-- extremely dangerous
+%                          % robustness is set to negative infinity, here we set to -9999                   
+%      end  
+%      end
 
      
      
