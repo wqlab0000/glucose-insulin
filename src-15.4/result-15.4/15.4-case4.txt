@@ -13,18 +13,22 @@ file name: 15.4-case4.txt
 50.000000 50.000000 
 -0.100000 0.100000 
 
- Meal CHO announced: 150.000000, actual: 221.779217 
-
  i: 1 
 propName: phi = (2G >= 9 /\ G <= 9 )  
+
+ Meal CHO planned: 150.000000, actual: 229.282932 
+
+ Lowest Glucose level: 3.738016, Time: 54.237288 
+
+ Highest Glucose level: 11.940102, Time: 142.372881 
  
- Scaled-Robustness: -2.613041 
- Robustness: -2.613041, Runtime: 2.181093 seconds
+ Scaled-Robustness: -5.880204 
+ Robustness: -2.940102, Runtime: 2.741259 seconds
  
- Meal time announced: 40.000000, actual: 40.000000 
- Meal duration announced: 30.000000, actual: 30.000000 
- Meal GI announced: 50.000000, actual 50.000000 
- Calibration Error: 0.037706 
+ Meal time planned: 40.000000, actual: 40.000000 
+ Meal duration planned: 30.000000, actual: 30.000000 
+ Meal GI planned: 50.000000, actual 50.000000 
+ Calibration Error: -0.025187 
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
 file name: 15.4-case4.txt 
@@ -41,18 +45,22 @@ file name: 15.4-case4.txt
 50.000000 50.000000 
 -0.100000 0.100000 
 
- Meal CHO announced: 150.000000, actual: 73.750314 
-
  i: 1 
 propName: phi = (2G >= 9 /\ G <= 9 )  
+
+ Meal CHO planned: 150.000000, actual: 71.907119 
+
+ Lowest Glucose level: 3.524294, Time: 61.016949 
+
+ Highest Glucose level: 4.967704, Time: 135.593220 
  
- Scaled-Robustness: -1.940990 
- Robustness: -0.970495, Runtime: 2.101451 seconds
+ Scaled-Robustness: -1.951412 
+ Robustness: -0.975706, Runtime: 2.607817 seconds
  
- Meal time announced: 40.000000, actual: 40.000000 
- Meal duration announced: 30.000000, actual: 30.000000 
- Meal GI announced: 50.000000, actual 50.000000 
- Calibration Error: 0.032987 
+ Meal time planned: 40.000000, actual: 40.000000 
+ Meal duration planned: 30.000000, actual: 30.000000 
+ Meal GI planned: 50.000000, actual 50.000000 
+ Calibration Error: -0.014497 
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
 file name: 15.4-case4.txt 
@@ -69,16 +77,20 @@ file name: 15.4-case4.txt
 50.000000 50.000000 
 -0.100000 0.100000 
 
- Meal CHO announced: 150.000000, actual: 142.726767 
-
  i: 1 
 propName: phi = (2G >= 9 /\ G <= 9 )  
+
+ Meal CHO planned: 150.000000, actual: 152.490744 
+
+ Lowest Glucose level: 3.678518, Time: 54.237288 
+
+ Highest Glucose level: 8.598566, Time: 135.593220 
  
- Scaled-Robustness: -0.829047 
- Robustness: -0.829047, Runtime: 2.312528 seconds
+ Scaled-Robustness: -1.642964 
+ Robustness: -0.821482, Runtime: 2.998136 seconds
  
- Meal time announced: 40.000000, actual: 40.000000 
- Meal duration announced: 30.000000, actual: 30.000000 
- Meal GI announced: 50.000000, actual 50.000000 
- Calibration Error: -0.068151 
+ Meal time planned: 40.000000, actual: 40.000000 
+ Meal duration planned: 30.000000, actual: 30.000000 
+ Meal GI planned: 50.000000, actual 50.000000 
+ Calibration Error: -0.049551 
 ------------------------------------------------------------------------------------
