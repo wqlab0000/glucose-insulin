@@ -124,18 +124,21 @@ fprintf (fid, 'file name: %s \n', fName);
    
    
     rob = results.run(results.optRobIndex).bestRob; % robustness value
+    
+    [min_Y, index]= min(Y,[],1)
+    minG = min_Y(1,1)
+    minIndex = index(1,1)
+    minT = T(minIndex,1)
+        
+    
+    if  minG < 4.5 && minG >=2.5   % lowest glucose level is [2.5 4.5]--dangerous
+       rob = rob * 2;  % we scale the robustness to twice larger than the original robustness
+    elseif minG < 2.5  % glucose level is within [0, 2.5)-- extremely dangerous
+       rob = -9999;    % robustness is set to negative infinity, here we set to -9999                   
+    else rob = rob;    % otherwise robustness keep the original value
+    end
 
-  
-%      if  input_range == lm_input;
-%      if rob >=0   % if robustness is zero or a positive value, glucose level is equal or over 4.5.                   
-%         rob = rob;   % robustness keep the original positive value.  
-%      elseif rob < 0 && rob >= -2 % if robustness is less than zero but over -2, glucose level is within [2.5 4.5] --dangerous  
-%         rob = 2 * rob; % we scale the robustness to twice larger than the original robustness.     
-%      else rob = -9999;    %if robustness is less than 2, glucose level is within [0, 2.5)-- extremely dangerous
-%                          % robustness is set to negative infinity, here we set to -9999                   
-%      end  
-%      end
-
+ 
      
      
    fprintf (fid, '\n Input file name: %s \n', x);
@@ -151,23 +154,29 @@ fprintf (fid, 'file name: %s \n', fName);
    fprintf (fid, '%f %f \n', b(10, :)); 
    
      
-   fprintf (fid,'\n Meal CHO announced: %f, actual: %f \n', IT(1,4), IT(1,9));
-  
+   
      
    fprintf (fid, '\n i: %d \n' , i); 
    fprintf (fid, 'propName: %s \n' , propName); 
+   
+   fprintf (fid,'\n Meal CHO planned: %f, actual: %f \n', IT(1,4), IT(1,9));
+   fprintf (fid,'\n Lowest Glucose level: %f, Time: %f \n', minG, minT); 
+
    fprintf (fid, ' \n Scaled-Robustness: %f', rob);
    fprintf (fid, ' \n Robustness: %f, Runtime: %f seconds\n', results.run(results.optRobIndex).bestRob,results.run(results.optRobIndex).time);
-   fprintf (fid,' \n Meal time announced: %f, actual: %f \n', IT(1,2), IT(1,7));
-   fprintf (fid,' Meal duration announced: %f, actual: %f \n', IT(1,3), IT(1,8));
-   fprintf (fid,' Meal GI announced: %f, actual %f \n', IT(1,5), IT(1,10));
+   fprintf (fid,' \n Meal time planned: %f, actual: %f \n', IT(1,2), IT(1,7));
+   fprintf (fid,' Meal duration planned: %f, actual: %f \n', IT(1,3), IT(1,8));
+   fprintf (fid,' Meal GI planned: %f, actual %f \n', IT(1,5), IT(1,10));
    fprintf (fid,' Calibration Error: %f \n', IT(1,11));
    fprintf (fid,'------------------------------------------------------------------------------------\n');   
 
-  
+   
+   
+   
     figure ;
     subplot(1,2,1);
     plot(T, Y(:,1));
+
 
 
     
