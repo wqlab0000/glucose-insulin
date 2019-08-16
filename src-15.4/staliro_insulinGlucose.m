@@ -125,10 +125,10 @@ fprintf (fid, 'file name: %s \n', fName);
    
     rob = results.run(results.optRobIndex).bestRob; % robustness value
     
-    [min_Y, index]= min(Y,[],1)
+    [min_Y, index]= min(Y,[],1) %find the lowest glucose level
     minG = min_Y(1,1)
-    minIndex = index(1,1)
-    minT = T(minIndex,1)
+    minIndex = index(1,1) % lowest glucose corresponding index
+    minT = T(minIndex,1)  % lowest glucose corresponding time
         
     
     if  minG < 4.5 && minG >=2.5   % lowest glucose level is [2.5 4.5]--dangerous
