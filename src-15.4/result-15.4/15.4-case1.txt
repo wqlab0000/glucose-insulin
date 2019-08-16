@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------
-file name: 15.4-case4.txt 
+file name: 15.4-case1.txt 
 
  Input file name: lm_input.txt 
 40.000000 40.000000 
@@ -14,24 +14,56 @@ file name: 15.4-case4.txt
 -0.100000 0.100000 
 
  i: 1 
-propName: phi = (2G >= 9 /\ G <= 9 )  
+propName: phi = (G >= 4.5)  
 
- Meal CHO planned: 150.000000, actual: 78.886439 
+ Meal CHO planned: 150.000000, actual: 122.173466 
 
- Lowest Glucose level: 3.544026, Time: 61.016949 
+ Lowest Glucose level: 3.655030, Time: 54.237288 
 
- Highest Glucose level: 5.282018, Time: 135.593220 
+ Highest Glucose level: 7.248145, Time: 135.593220 
  
- Scaled-Robustness: -1.911948 
- Robustness: -0.955974, Runtime: 2.600235 seconds
+ Scaled-Robustness: -1.689941 
+ Robustness: -0.844970, Runtime: 2.790941 seconds
  
  Meal time planned: 40.000000, actual: 40.000000 
  Meal duration planned: 30.000000, actual: 30.000000 
  Meal GI planned: 50.000000, actual 50.000000 
- Calibration Error: -0.092976 
+ Calibration Error: 0.087580 
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
-file name: 15.4-case4.txt 
+file name: 15.4-case1.txt 
+
+ Input file name: lm_input.txt 
+40.000000 40.000000 
+30.000000 30.000000 
+150.000000 150.000000 
+50.000000 50.000000 
+150.000000 250.000000 
+40.000000 40.000000 
+30.000000 30.000000 
+70.000000 140.000000 
+50.000000 50.000000 
+-0.100000 0.100000 
+
+ i: 1 
+propName: phi = (G >= 4.5)  
+
+ Meal CHO planned: 150.000000, actual: 102.884754 
+
+ Lowest Glucose level: 3.611882, Time: 61.016949 
+
+ Highest Glucose level: 6.369093, Time: 135.593220 
+ 
+ Scaled-Robustness: -1.776237 
+ Robustness: -0.888118, Runtime: 2.745071 seconds
+ 
+ Meal time planned: 40.000000, actual: 40.000000 
+ Meal duration planned: 30.000000, actual: 30.000000 
+ Meal GI planned: 50.000000, actual 50.000000 
+ Calibration Error: -0.044005 
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+file name: 15.4-case1.txt 
 
  Input file name: ok_input.txt 
 40.000000 40.000000 
@@ -46,24 +78,24 @@ file name: 15.4-case4.txt
 -0.100000 0.100000 
 
  i: 1 
-propName: phi = (2G >= 9 /\ G <= 9 )  
+propName: phi = (G >= 4.5)  
 
- Meal CHO planned: 150.000000, actual: 142.675008 
+ Meal CHO planned: 150.000000, actual: 144.568815 
 
- Lowest Glucose level: 3.670913, Time: 54.237288 
+ Lowest Glucose level: 3.672381, Time: 54.237288 
 
- Highest Glucose level: 8.169283, Time: 135.593220 
+ Highest Glucose level: 8.252199, Time: 135.593220 
  
- Scaled-Robustness: -1.658173 
- Robustness: -0.829087, Runtime: 2.612253 seconds
+ Scaled-Robustness: -1.655239 
+ Robustness: -0.827619, Runtime: 2.712186 seconds
  
  Meal time planned: 40.000000, actual: 40.000000 
  Meal duration planned: 30.000000, actual: 30.000000 
  Meal GI planned: 50.000000, actual 50.000000 
- Calibration Error: 0.074724 
+ Calibration Error: 0.070222 
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
-file name: 15.4-case4.txt 
+file name: 15.4-case1.txt 
 
  Input file name: hm_input.txt 
 40.000000 40.000000 
@@ -78,19 +110,19 @@ file name: 15.4-case4.txt
 -0.100000 0.100000 
 
  i: 1 
-propName: phi = (2G >= 9 /\ G <= 9 )  
+propName: phi = (G >= 4.5)  
 
- Meal CHO planned: 150.000000, actual: 227.624014 
+ Meal CHO planned: 150.000000, actual: 161.194932 
 
- Lowest Glucose level: 3.736731, Time: 54.237288 
+ Lowest Glucose level: 3.685262, Time: 54.237288 
 
- Highest Glucose level: 11.867822, Time: 142.372881 
+ Highest Glucose level: 8.977788, Time: 135.593220 
  
- Scaled-Robustness: -2.867822 
- Robustness: -2.867822, Runtime: 2.597897 seconds
+ Scaled-Robustness: -1.629476 
+ Robustness: -0.814738, Runtime: 2.692863 seconds
  
  Meal time planned: 40.000000, actual: 40.000000 
  Meal duration planned: 30.000000, actual: 30.000000 
  Meal GI planned: 50.000000, actual 50.000000 
- Calibration Error: -0.085550 
+ Calibration Error: 0.065556 
 ------------------------------------------------------------------------------------
