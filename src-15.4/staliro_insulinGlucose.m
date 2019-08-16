@@ -109,7 +109,7 @@ opt.optim_params.n_tests=10; %The total number of tests to be executed
 
 
 mkdir 15.4 % create a result folder and save output file in result folder
-savePath = '/Users/WenjiQuan/Desktop/trunk/benchmarks/insulinGlucoseHumanCtrlRisk/hovorkaModel/insulinGlucose2/15.4/'; 
+savePath = '/path/to/15.4/'; 
 fid = fopen([savePath fName],'at'); 
 result =[fName '\t'];
 
