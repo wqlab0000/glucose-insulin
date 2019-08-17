@@ -132,9 +132,9 @@ fprintf (fid, 'file name: %s \n', fName);
         
     
    if preds(1).str == 'g_1' 
-    if rob<0 && minG < 4.5 && minG >=2.5 && 2*(4.5-minG)>(maxG-9)  % lowest glucose level is [2.5 4.5]--dangerous     
+    if rob<0 && minG < 4.5 && minG >=2.5 && maxG>9 && 2*(4.5-minG)>(maxG-9)  % lowest glucose level is [2.5 4.5]--dangerous     
        rob = rob * 2; % we scale the robustness to twice larger than the original robustness
-    elseif rob<0 && minG<4.5 && maxG <=9 
+    elseif rob<0 && minG<4.5 && minG >=2.5 && maxG <=9 
        rob = rob * 2; 
     elseif minG < 2.5  % glucose level is within [0, 2.5)-- extremely dangerous
        rob = -9999;    % robustness is set to negative infinity, here we set to -9999                   
