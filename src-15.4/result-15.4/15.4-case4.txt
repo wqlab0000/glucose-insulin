@@ -94,3 +94,72 @@ propName: phi = (2G >= 9 /\ G <= 9 )
  Meal GI planned: 50.000000, actual 50.000000 
  Calibration Error: -0.085550 
 ------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+file name: case4.txt 
+
+ Input file name: lm_input.txt 
+40.000000 40.000000 
+30.000000 30.000000 
+150.000000 150.000000 
+50.000000 50.000000 
+150.000000 250.000000 
+40.000000 40.000000 
+30.000000 30.000000 
+70.000000 140.000000 
+50.000000 50.000000 
+-0.100000 0.100000 
+
+ i: 1 
+propName: phi = (I<= 0.14)  
+
+ Meal CHO planned: 150.000000, actual: 113.155595 
+
+ Lowest Glucose level: 3.640927, Time: 61.016949 
+
+ Highest Glucose level: 6.836686, Time: 135.593220 
+
+ Highest Insulin dose: 0.144322 
+ 
+ Scaled-Robustness: -4.321546 
+ Robustness: -0.004322, Runtime: 4.647408 seconds
+ 
+ Meal time planned: 40.000000, actual: 40.000000 
+ Meal duration planned: 30.000000, actual: 30.000000 
+ Meal GI planned: 50.000000, actual 50.000000 
+ Calibration Error: 0.078635 
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+file name: case4.txt 
+
+ Input file name: lm_input.txt 
+40.000000 40.000000 
+30.000000 30.000000 
+150.000000 150.000000 
+50.000000 50.000000 
+150.000000 250.000000 
+40.000000 40.000000 
+30.000000 30.000000 
+70.000000 140.000000 
+50.000000 50.000000 
+-0.100000 0.100000 
+
+ i: 1 
+propName: phi = (I<= 0.14)  
+
+ Meal CHO planned: 150.000000, actual: 87.729092 
+
+ Lowest Glucose level: 3.569027, Time: 61.016949 
+
+ Highest Glucose level: 5.681543, Time: 135.593220 
+
+ Highest Insulin dose: 0.144322 
+ 
+ Scaled-Robustness: -4.321546 
+ Robustness: -0.004322, Runtime: 4.506150 seconds
+ 
+ Meal time planned: 40.000000, actual: 40.000000 
+ Meal duration planned: 30.000000, actual: 30.000000 
+ Meal GI planned: 50.000000, actual 50.000000 
+ Calibration Error: 0.080540 
+------------------------------------------------------------------------------------
+
