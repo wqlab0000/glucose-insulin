@@ -193,8 +193,8 @@ fprintf (fid, 'file name: %s \n', fName);
 
    
     
-if preds(1).str == 'g_1' 
-         if minG < 4.5   % lowest glucose level is [2.5 4.5]--dangerous   
+    if preds(1).str == 'g_1' 
+        if minG < 4.5   % lowest glucose level is [2.5 4.5]--dangerous   
              rob1 = -(10*(minG-4.5))^2;
           if maxG > 9 
              rob2 = 9-maxG;
