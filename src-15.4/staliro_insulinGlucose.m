@@ -1,5 +1,5 @@
 clear 
-mdl = 'insulinGlucoseSimHumanCtrl';
+mdl = 'insulinGlucose';
 cp_array=[1 1 1 1 1 1 1 1 1 1];
 
 init_cond = [];
@@ -9,10 +9,8 @@ type file_name.txt;
 x = input('\n Input a file name you want to explore \n','s')
 
 input_range = importdata(x); %import input_range data from text file
-%[m,n] = size(input_range);
 b = reshape(input_range, 10, 2);
 
-% disp(importdata(x))
 disp(b)
 
 
@@ -164,19 +162,15 @@ opt;
 
 opt.optimization_solver = 'SA_Taliro';
 opt.optim_params.n_tests=10; %The total number of tests to be executed
-% opt.taliro = 'dp_taliro';
 
 
-% fid = fopen(fName,'a');
-
-mkdir 1 % create a result folder and save output file in result folder
-savePath = '/Users/quanw/Desktop/trunk/benchmarks/insulinGlucoseHumanCtrlRisk/hovorkaModel/insulinGlucose2/1/'; 
+mkdir 15.4 % create a result folder and save output file in result folder
+savePath = '/path/to/15.4/'; 
 fid = fopen([savePath fName],'at'); 
 result =[fName '\t'];
 
 fprintf (fid,'------------------------------------------------------------------------------------\n');
 fprintf (fid, 'file name: %s \n', fName);
-% fprintf (fid, '\n starting opt runs\n');
 
     
     for i = 1:opt.runs
@@ -197,76 +191,24 @@ fprintf (fid, 'file name: %s \n', fName);
     minT = T(minIndex,1)   % lowest glucose corresponding time
     minI =min_Y(1,2)      %find the lowest insulin dose
 
-
+   
     
-%     if preds(1).str == 'g_1' 
-%         if minG < 4.5 && minG >=2.5 && maxG>9 && 2*(4.5-minG)>(maxG-9)  % lowest glucose level is [2.5 4.5]--dangerous     
-%        rob = rob * 2; % we scale the robustness to twice larger than the original robustness
-%         elseif minG<4.5 && maxG <=9 
-%        rob = rob * 2; 
-%         elseif minG < 2.5  % glucose level is within [0, 2.5)-- extremely dangerous
-%        rob = rob * 100;    % robustness is set to 100*rob   
-%     else rob = rob;     % otherwise robustness keep the original value
-%         end
-%     end
-  
-if preds(1).str == 'g_1'
-  if minG < 4.5 && ((maxG>9 && 2*(4.5-minG)>(maxG-9))|| maxG <=9 )
-     rob = -(10*(minG-4.5))^2;
-% we scale the robustness when glucose level under 4.5
-else rob = rob;     % otherwise robustness keep the original value
-  end
-end
-
-
-%     if preds(1).str == 'i_1'  
-%       if maxI>0.14            % insulin dose is over 0.14 
-%       rob = rob*1000;          % robustness is set to 1000*rob
-%        elseif minG<4.5  
-%        rob = rob * 2; 
-%         elseif minG < 2.5  % glucose level is within [0, 2.5)-- extremely dangerous
-%        rob = rob * 100;    % robustness is set to 100*rob   
-%       else rob = rob;
-%       end
-%     end
-    
-%     if preds(1).str == 'i_2'  
-%       if minI<0.04 && minG>=4.5   % insulin dose is under 0.04
-%       rob = rob*1000;          % robustness is set to 1000*rob
-%       else rob = rob;
-%       end
-%     end
-    
- if preds(1).str == 'i_1'
-    if maxI>0.14             % insulin dose is over 0.14
-    rob = rob*1000;          % robustness is set to 1000*rob
-    else rob = rob;
-    end
-  end
-
-
-  if preds(1).str == 'i_2'
-    if maxI>0.14 && minG>=4.5 % insulin dose is over 0.14
-    rob = rob*1000;           % robustness is set to 1000*rob
-    elseif minG<4.5
-    rob = rob*10
-    elseif minG<2.5
-    rob = rob * 100;
-    else rob = rob;
-    end
-  end
-    
-    
-%      if  x == lm_input
-%      if rob >=0   % if robustness is zero or a positive value, glucose level is equal or over 4.5.                   
-%         rob = rob;   % robustness keep the original positive value.  
-%      elseif rob < 0 && rob >= -2 % if robustness is less than zero but over -2, glucose level is within [2.5 4.5] --dangerous  
-%         rob = 2 * rob; % we scale the robustness to twice larger than the original robustness.     
-%      else rob = -9999;    %if robustness is less than 2, glucose level is within [0, 2.5)-- extremely dangerous
-%                          % robustness is set to negative infinity, here we set to -9999                   
-%      end  
-%      end
-
+   if preds(1).str == 'g_1' 
+       if minG < 4.5 && minG >=2.5 % lowest glucose level is [2.5 4.5]--dangerous   
+           rob1 = minG-4.5
+          if maxG>9
+           rob2 = 9-maxG
+          elseif maxG<9
+           rob2 = rob1
+             if rob1 * 2 < rob2
+                rob = rob1 * 2; % we scale the robustness to twice larger than the original robustness
+       elseif minG < 2.5  % glucose level is within [0, 2.5)-- extremely dangerous
+         rob = (minG-2.5) * 100;    % robustness is set to 100*rob   
+       else rob = rob;     % otherwise robustness keep the original value
+         end
+       end
+       end
+   end
    
    
   
