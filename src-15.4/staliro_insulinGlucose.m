@@ -193,24 +193,22 @@ fprintf (fid, 'file name: %s \n', fName);
 
    
     
-   if preds(1).str == 'g_1' 
-       if minG < 4.5 && minG >=2.5 % lowest glucose level is [2.5 4.5]--dangerous   
-           rob1 = minG-4.5
-          if maxG>9
-           rob2 = 9-maxG
-          elseif maxG<9
-           rob2 = rob1
-             if rob1 * 2 < rob2
-                rob = rob1 * 2; % we scale the robustness to twice larger than the original robustness
-             elseif rob1 * 2 >= rob2
+   rob1= 2*(minG-4.5);
+   rob2= 9-maxG;
+   rob3= 100*(minG-4.5);
+    
+     if preds(1).str == 'g_1' 
+         if minG < 4.5 && minG >=2.5       % lowest glucose level is [2.5 4.5]--dangerous   
+             rob = rob1;            
+             if rob2 < rob1
                  rob = rob2;
-        elseif minG < 2.5  % glucose level is within [0, 2.5)-- extremely dangerous
-         rob = (minG-2.5) * 100;    % robustness is set to 100*rob   
-        else rob = rob;     % otherwise robustness keep the original value
+                if minG<2.5
+                rob = rob3; 
+             else rob = rob1;
              end
-          end
-       end
-   end
+         end
+         end
+     end
    
   
      
