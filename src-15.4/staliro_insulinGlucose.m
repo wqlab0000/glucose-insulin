@@ -202,14 +202,15 @@ fprintf (fid, 'file name: %s \n', fName);
            rob2 = rob1
              if rob1 * 2 < rob2
                 rob = rob1 * 2; % we scale the robustness to twice larger than the original robustness
-       elseif minG < 2.5  % glucose level is within [0, 2.5)-- extremely dangerous
+             elseif rob1 * 2 >= rob2
+                 rob = rob2;
+        elseif minG < 2.5  % glucose level is within [0, 2.5)-- extremely dangerous
          rob = (minG-2.5) * 100;    % robustness is set to 100*rob   
-       else rob = rob;     % otherwise robustness keep the original value
-         end
-       end
+        else rob = rob;     % otherwise robustness keep the original value
+             end
+          end
        end
    end
-   
    
   
      
