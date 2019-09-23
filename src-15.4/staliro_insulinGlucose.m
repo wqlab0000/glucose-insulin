@@ -21,10 +21,6 @@ disp(' 2. G <= 9 ' )
 disp(' 3. G >= 4.5 /\ G <= 9 ' )
 disp(' 4. I<= 0.14 ' )
 disp(' 5. I <= 0.14 /\ G >= 4.5 ' )
-disp(' 6. I >= 0.04 /\ G <= 9 ' )
-disp(' 7. I >= 0.04 /\ G <= 9 ' )
-disp(' 8. I >= 0.04 /\ G <= 9 ' )
-
 
 
 disp(' Please select option: ' )
@@ -97,47 +93,7 @@ switch choice
         fName='case5.txt';
         
         
-   case 6
-        phi = '[] i_2 /\ [] g_2';
-        preds(1).str='i_2'; % i >= 0.04
-        preds(1).A = [0 -1 0];
-        preds(1).b = -0.04 ; 
-       
-        preds(2).str ='g_2'; % G<=9
-        preds(2).A = [1 0 0 ];
-        preds(2).b = 9 ;
-
-        propName='phi = (I >=0.04 /\ G <= 9 ) ';
-        fName='case6.txt';
-    
-   case 7
-          phi = '[] i_1 /\ [] g_2';
-
-          preds(1).str='i_1';  % I <= 0.14
-          preds(1).A = [0 1 0];
-          preds(1).b = 0.14 ;
-
-          preds(2).str ='g_2'; % G <=9
-          preds(2).A = [1 0 0 ];
-          preds(2).b = 9 ;
-
-          propName='phi = (I<= 0.14 /\ G >=4.5 ) ';
-          fName='case7.txt';
-
-    case 8
-          phi = '[] i_2 /\ []_[100 400] g_1';
-
-          preds(1).str='i_2';  % I >= 0.04
-          preds(1).A = [0 -1 0];
-          preds(1).b = -0.04 ;
-
-          preds(2).str ='g_1'; % G >=4.5
-          preds(2).A = [-1 0 0 ];
-          preds(2).b = -4.5 ;
-
-          propName='phi = (I >= 0.04 /\ G >=4.5 ) ';
-          fName='case8.txt';    
-        
+   
  
 end
 
@@ -191,7 +147,6 @@ fprintf (fid, 'file name: %s \n', fName);
     minT = T(minIndex,1)   % lowest glucose corresponding time
     minI =min_Y(1,2)      %find the lowest insulin dose
 
-   
     
    rob1= 2*(minG-4.5);
    rob2= 9-maxG;
