@@ -167,7 +167,12 @@ fprintf (fid, 'file name: %s \n', fName);
     subplot(1,2,2);
     plot(T, Y(:,2));
 
+p = polyfit(T,Y(:,1),7);
 
+ T1 = linspace(0,400);
+ Y1 = polyval(p,T1);
+figure
+plot(T1,Y1);
 
 
    disp ('Best input for simulation run # ')
