@@ -1,5 +1,5 @@
 clear
-mdl = 'insulinGlucose';
+mdl = 'insulinGlucoseSimHumanCtrl';
 cp_array=[1 1 1 1 1 1 1 1 1 1];
 
 init_cond = [];
@@ -95,9 +95,9 @@ opt.optimization_solver = 'SA_Taliro';
 opt.optim_params.n_tests=10; %The total number of tests to be executed
 
 
-mkdir figure4.3update % create a result folder and save output file in result folder
-savePath = '/path/to/figure4.3update/';
-fid = fopen([savePath fName],'at');
+mkdir 1 % create a result folder and save output file in result folder
+savePath = 'link to the file'; 
+fid = fopen([savePath fName],'at'); 
 result =[fName '\t'];
 
 fprintf (fid,'------------------------------------------------------------------------------------\n');
@@ -167,8 +167,9 @@ fprintf (fid, 'file name: %s \n', fName);
     subplot(1,2,2);
     plot(T, Y(:,2));
 
-p = polyfit(T,Y(:,1),7);
+p = polyfit(T,Y(:,1),10);
 
+%  T1 = linspace(0,400);
  Y1 = polyval(p,T);
 figure
 plot(T,Y1,T,Y(:,1));
