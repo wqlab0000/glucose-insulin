@@ -7,6 +7,7 @@ Note: We only showed the actual changed conditions here, all the planned conditi
 
 | File name     | Trace Specification | Actual Changed Condition      | Contents               |
 | ------------- | ---------------|--------------- |------------------------|
+| figure 4.3 update |  -|-| polyfit results & figure & code |
 | data |  -|-| summarize 1.3, 3.3, 15.2, 16.2 file data |
 | src  |  G >= 4.5 /\ G <= 9| CHO is 200 more than planned| results & figure & code|
 | src-1.2  |  G >= 4.5 | CHO is 200 more than planned| results & figure & code|
