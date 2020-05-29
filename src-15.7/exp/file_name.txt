@@ -1,3 +1,0 @@
-hm_input.txt
-lm_input.txt
-ok_input.txt
