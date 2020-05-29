@@ -1,0 +1,16 @@
+Case 1:
+scale=2;
+preds(1).A = [-1 0 0];
+preds(1).b = [-4.5 0 0]; 
+      
+Original Robustness: -0.83788
+Scaled Robustness:   -1.6758
+
+
+
+Case 2:
+scale=1;
+preds(1).A = [-2 0 0];
+preds(1).b = [-9 0 0]; 
+
+Robustness: -0.8648

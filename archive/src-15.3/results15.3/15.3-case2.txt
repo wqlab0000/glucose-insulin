@@ -1,0 +1,34 @@
+------------------------------------------------------------------------------------
+file name: 15.3-case2.txt 
+
+ starting opt runs
+
+ Meal CHO announced: 150.000000, actual: 196.312996 
+
+ i: 1 
+propName: phi = (G <= 9 )  
+ 
+ Robustness: -1.504008, Runtime: 3.041354 seconds
+ 
+ Meal time announced: 40.000000, actual: 40.000000 
+ Meal duration announced: 30.000000, actual: 30.000000 
+ Meal GI announced: 50.000000, actual 50.000000 
+ Calibration Error: 0.072985 
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+file name: 15.3-case2.txt 
+
+ starting opt runs
+
+ Meal CHO announced: 150.000000, actual: 109.147570 
+
+ i: 1 
+propName: phi = (G <= 9 )  
+ 
+ Robustness: 2.345924, Runtime: 2.242313 seconds
+ 
+ Meal time announced: 40.000000, actual: 40.000000 
+ Meal duration announced: 30.000000, actual: 30.000000 
+ Meal GI announced: 50.000000, actual 50.000000 
+ Calibration Error: -0.041663 
+------------------------------------------------------------------------------------

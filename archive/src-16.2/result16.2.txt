@@ -1,0 +1,49 @@
+src-16.2 results.
+
+Note, although the CHO range for both case 1 & 2 are [30 40].
+Case 1 & 2  actual meal CHO are different.
+So the results we got are different depends on the actual CHO.
+
+
+
+Case 1 
+        phi = '[] g_1 /\ [] g_2';
+
+
+preds(1).str='g_1'; % G_1>=4.5
+        preds(1).A = [-1 0 0];
+        preds(1).b = [-4.5 0 0];
+
+preds(2).str ='g_2'; % G_2<=9
+        preds(2).A = [1 0 0 ];
+        preds(2).b = [9 0 0];
+
+Robustness: -1.672175, Runtime: 1.932060 seconds
+ Meal time announced: 40.000000, actual: 40.000000 
+ Meal duration announced: 30.000000, actual: 30.000000 
+ Meal carbohydrate announced: 150.000000, actual: 30.964300 
+ Meal GI announced: 50.000000, actual 50.000000 
+ Calibration Error: -0.080179 
+
+
+
+case 2
+        phi = '[] g_1 /\ [] g_2';
+       
+ preds(1).str='g_1'; % G_1>=4.5
+        preds(1).A = [-2 0 0];
+        preds(1).b = [-9 0 0]; 
+
+
+preds(2).str ='g_2'; % G_2<=9
+        preds(2).A = [1 0 0 ];
+        preds(2).b = [9 0 0];
+
+
+Robustness: -1.516838, Runtime: 1.917422 seconds
+ Meal time announced: 40.000000, actual: 40.000000 
+ Meal duration announced: 30.000000, actual: 30.000000 
+ Meal carbohydrate announced: 150.000000, actual: 36.277228 
+ Meal GI announced: 50.000000, actual 50.000000 
+ Calibration Error: -0.028553 
+
