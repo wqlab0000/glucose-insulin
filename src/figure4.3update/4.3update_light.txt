@@ -1,0 +1,68 @@
+------------------------------------------------------------------------------------
+file name: 4.3update_light.txt
+
+ Input file name: lm_input.txt 
+40.000000 40.000000 
+30.000000 30.000000 
+150.000000 150.000000 
+50.000000 50.000000 
+200.000000 200.000000 
+40.000000 40.000000 
+30.000000 30.000000 
+70.000000 140.000000 
+50.000000 50.000000 
+0.100000 0.100000 
+
+ i: 1 
+propName: phi = (G >= 4.5)  
+
+ Meal CHO planned: 150.000000, actual: 84.613880 
+
+ Lowest Glucose level: 4.071721, Time: 61.016949 
+
+ Highest Glucose level: 6.910074, Time: 149.152542 
+
+ Highest Insulin dose: 0.107951 
+ 
+ Scaled-Robustness: -0.856557 
+ Robustness: -0.428279, Runtime: 1.975043 seconds
+ 
+ Meal time planned: 40.000000, actual: 40.000000 
+ Meal duration planned: 30.000000, actual: 30.000000 
+ Meal GI planned: 50.000000, actual 50.000000 
+ Calibration Error: -0.088286 
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+file name: 4.3update_light.txt 
+
+ Input file name: lm_input.txt 
+40.000000 40.000000 
+30.000000 30.000000 
+150.000000 150.000000 
+50.000000 50.000000 
+200.000000 200.000000 
+40.000000 40.000000 
+30.000000 30.000000 
+70.000000 140.000000 
+50.000000 50.000000 
+0.100000 0.100000 
+
+ i: 1 
+propName: phi = (G >= 4.5)  
+
+ Meal CHO planned: 150.000000, actual: 116.717461 
+
+ Lowest Glucose level: 4.114439, Time: 54.237288 
+
+ Highest Glucose level: 8.666141, Time: 149.152542 
+
+ Highest Insulin dose: 0.107951 
+ 
+ Scaled-Robustness: -0.771122 
+ Robustness: -0.385561, Runtime: 1.958802 seconds
+ 
+ Meal time planned: 40.000000, actual: 40.000000 
+ Meal duration planned: 30.000000, actual: 30.000000 
+ Meal GI planned: 50.000000, actual 50.000000 
+ Calibration Error: -0.049160 
+------------------------------------------------------------------------------------
